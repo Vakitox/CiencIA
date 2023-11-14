@@ -1,0 +1,91 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="/css/index/font-awesome.css">
+</head>
+
+{{#unless user}}
+    <!-- ***** Header Area Start ***** -->
+      <header class="header-area header-sticky">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12">
+                      <nav class="main-nav">
+                          <!-- ***** Logo Start ***** -->
+                          <a href="/" class="logo">
+                              <img src="../../images/logo.jpg" alt="Imagen de ejemplo">
+                          </a>
+                          <!-- ***** Logo End ***** -->
+                          <!-- ***** Menu Start ***** -->
+                          <ul class="nav">
+                              <li class="scroll-to-section"><a href="#welcome" class="menu-item">Inicio</a></li>
+                              <li class="scroll-to-section"><a href="#about" class="menu-item">Nosotros</a></li>
+                              </li>
+                              <li class="submenu">
+                                  <a href="javascript:;">Metodología</a>
+                                  <ul>
+                                      <li><a href="" class="menu-item">About Us</a></li>
+                                      <li><a href="" class="menu-item">Features</a></li>
+                                      <li><a href="" class="menu-item">FAQ's</a></li>
+                                      <li><a href="" class="menu-item">Blog</a></li>
+                                  </ul>
+                              </li>
+                              <li class="scroll-to-section"><a href="#testimonials" class="menu-item">Laboratorio</a>
+                              <li class="scroll-to-section"><a href="#testimonials" class="menu-item">Recursos</a>
+                              <li class="scroll-to-section"><a href="sesion" class="button-custom">Ingresar</a></li>
+                          </ul>
+                          <a class='menu-trigger'>
+                              <span>Menu</span>
+                          </a>
+                          <!-- ***** Menu End ***** -->
+                      </nav>
+                  </div>
+              </div>
+          </div>
+      </header>
+      <!-- ***** Header Area End ***** -->
+{{/unless}}
+
+
+
+{{#if user}}
+    <!-- ***** Header Area Start ***** -->
+      <header class="header-area header-sticky background-header">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12">
+                      <nav class="main-nav">
+                          <!-- ***** Logo Start ***** -->
+                          <a href="/" class="logo">
+                              <img src="../../images/logo.jpg" alt="Imagen de ejemplo">
+                          </a>
+                          <!-- ***** Logo End ***** -->
+                          <!-- ***** Menu Start ***** -->
+                          <ul class="nav">
+                              <li class="scroll-to-section"><a href="#welcome" class="menu-item">Ayuda</a></li>
+                              <li class="scroll-to-section"><a href="matrices" class="menu-item">Mis Matrices</a></li>
+                              <li class="scroll-to-section"><a href="#testimonials" class="menu-item">Recursos</a>
+                              <li class="submenu">
+                                  <a href="javascript:;">Hola, {{user.Nombres}}</a>
+                                  <ul>
+                                      <li><a href="" class="menu-item">Mi perfil</a></li>
+                                      <li><a href="logout" class="menu-item">Cerrar sesión</a></li>
+                                  </ul>
+                              </li>
+                              <!-- Mostrar bandera -->
+                                <button class="btn btn-circle" id="btn-bandera" style="margin-top: -4px;">
+                                    <img src="images/paises/{{user.Pais}}.png" alt="País">
+                                </button>
+                          </ul>
+                          <a class='menu-trigger'>
+                              <span>Menu</span>
+                          </a>
+                          <!-- ***** Menu End ***** -->
+                      </nav>
+                  </div>
+              </div>
+          </div>
+      </header>
+      <!-- ***** Header Area End ***** -->
+
+{{/if}}

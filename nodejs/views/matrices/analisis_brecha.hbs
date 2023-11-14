@@ -1,0 +1,239 @@
+<head>
+  <script src="/js/Pop-up.js"></script>
+  <link rel="stylesheet" href="/css/matrices_brechas.css">
+  <link rel="stylesheet" href="/css/pop-up.css">
+</head>
+
+{{>navigation}}
+{{>navigation_vertical}}
+
+<main>
+
+<!-- MODAL DE INICIO DE PAGINA -->
+
+<div class="pop-up">
+        <div class="pop-up-wrap">
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/project/project-image06.png" class="d-block w-100" alt="1">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First slide label</h5>
+                      <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/project/project-image06.png" class="d-block w-100" alt="2">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Second slide label</h5>
+                      <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/project/project-image06.png" class="d-block w-100" alt="3">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Third slide label</h5>
+                      <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/project/project-image06.png" class="d-block w-100" alt="">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Third slide label</h5>
+                      <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                  </div>
+                </div>
+                <i class="far fa-times-circle" id="close"></i>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+
+  <section class="table__body">
+
+    <input type="button" value="Ver Instrucciones" class="btn-abrir">
+
+    <table class="table_matriz table-striped">
+      <section class="table__cabecera">
+          <br><br> <h1 style="text-align:center">Matriz de Análisis de Brechas del Problema</h1>
+
+          
+          <div class="export__file">
+              <label for="export-file" class="export__file-btn" title="Export File"></label>
+              <input type="checkbox" id="export-file">
+              <div class="export__file-options">
+                  <label>Export As &nbsp; &#10140;</label>
+                  <label for="export-file" id="toPDF">PDF <img src="images/pdf.png" alt=""></label>
+                  <label for="export-file" id="toJSON">JSON <img src="images/json.png" alt=""></label>
+                  <label for="export-file" id="toCSV">CSV <img src="images/csv.png" alt=""></label>
+                  <label for="export-file" id="toEXCEL">EXCEL <img src="images/excel.png" alt=""></label>
+              </div>
+          </div>
+        </section>
+
+        <thead>
+          <tr>
+            <th scope="col">N°</th>
+            <th scope="col">Nombre de investigación</th>
+            <th scope="col">DOI</th>
+            <th scope="col">Tipo de brecha</th>
+            <th scope="col">Brechas de investigación</th>
+            <th scope="col">Resumen</th>
+            <th scope="col">Conclusiones</th>
+            <th scope="col">Cuartil (Q)</th>
+                      </tr>
+        </thead>
+
+        <tbody>
+            
+                                    <!-- Fila 1 -->
+
+          <tr>
+            <th scope="row">1</th>
+            <td><input type="text" class="form-control" name="nombre_investigacion_1"></td>
+            <td><input type="text" class="form-control" name="doi_1" required></td>
+            <td>
+                <select name="tipo_brecha_1" class="form-control">
+                <option value="1">Brecha de conocimiento</option>
+                <option value="2">Brecha teórica</option>
+                <option value="3">Brecha de evidencia contradictoria</option>
+                <option value="4">Brecha de selección de población y muestra</option>
+                <option value="5">Brecha metodológica</option>
+                </select>
+            </td>
+            <td><textarea class="form-control" name="brechas_inves_1"></textarea></td>
+            <td><input type="text" class="form-control" name="resumen_1"></td>
+            <td><input type="text" class="form-control" name="conclusiones_1"></td>
+            <td><input type="text" class="form-control" name="cuartil_1"></td>
+          </tr>
+
+                                    <!-- Fila 2 -->
+                <tr>
+            <th scope="row">2</th>
+            <td><input type="text" class="form-control" name="nombre_investigacion_2"></td>
+            <td><input type="text" class="form-control" name="doi_2"></td>
+            <td>
+                <select name="tipo_brecha_2" class="form-control">
+                <option value="1">Brecha de conocimiento</option>
+                <option value="2">Brecha teórica</option>
+                <option value="3">Brecha de evidencia contradictoria</option>
+                <option value="4">Brecha de selección de población y muestra</option>
+                <option value="5">Brecha metodológica</option>
+                </select>
+            </td>
+            <td><textarea class="form-control" name="brechas_inves_2"></textarea></td>
+            <td><input type="text" class="form-control" name="resumen_2"></td>
+            <td><input type="text" class="form-control" name="conclusiones_2"></td>
+            <td><input type="text" class="form-control" name="cuartil_2"></td>
+          </tr>
+
+                                    <!-- Fila 3 -->
+
+                <tr>
+            <th scope="row">3</th>
+            <td><input type="text" class="form-control" name="nombre_investigacion_3"></td>
+            <td><input type="text" class="form-control" name="doi_3"></td>
+            <td>
+                <select name="tipo_brecha_3" class="form-control">
+                <option value="1">Brecha de conocimiento</option>
+                <option value="2">Brecha teórica</option>
+                <option value="3">Brecha de evidencia contradictoria</option>
+                <option value="4">Brecha de selección de población y muestra</option>
+                <option value="5">Brecha metodológica</option>
+                </select>
+            </td>
+            <td><textarea class="form-control" name="brechas_inves_3"></textarea></td>
+            <td><input type="text" class="form-control" name="resumen_3"></td>
+            <td><input type="text" class="form-control" name="conclusiones_3"></td>
+            <td><input type="text" class="form-control" name="cuartil_3"></td>
+          </tr>
+
+          
+                                    <!-- Fila 4 -->
+
+                <tr>
+            <th scope="row">4</th>
+            <td><input type="text" class="form-control" name="nombre_investigacion_4"></td>
+            <td><input type="text" class="form-control" name="doi_4"></td>
+            <td>
+                <select name="tipo_brecha_4" class="form-control">
+                <option value="1">Brecha de conocimiento</option>
+                <option value="2">Brecha teórica</option>
+                <option value="3">Brecha de evidencia contradictoria</option>
+                <option value="4">Brecha de selección de población y muestra</option>
+                <option value="5">Brecha metodológica</option>
+                </select>
+            </td>
+            <td><textarea class="form-control" name="brechas_inves_4"></textarea></td>
+            <td><input type="text" class="form-control" name="resumen_4"></td>
+            <td><input type="text" class="form-control" name="conclusiones_4"></td>
+            <td><input type="text" class="form-control" name="cuartil_4"></td>
+          </tr>
+
+          
+                                    <!-- Fila 5 -->
+
+                <tr>
+            <th scope="row">5</th>
+            <td><input type="text" class="form-control" name="nombre_investigacion_5"></td>
+            <td><input type="text" class="form-control" name="doi_5"></td>
+            <td>
+                <select name="tipo_brecha_5" class="form-control">
+                <option value="1">Brecha de conocimiento</option>
+                <option value="2">Brecha teórica</option>
+                <option value="3">Brecha de evidencia contradictoria</option>
+                <option value="4">Brecha de selección de población y muestra</option>
+                <option value="5">Brecha metodológica</option>
+                </select>
+            </td>
+            <td><textarea class="form-control" name="brechas_inves_5"></textarea></td>
+            <td><input type="text" class="form-control" name="resumen_5"></td>
+            <td><input type="text" class="form-control" name="conclusiones_5"></td>
+            <td><input type="text" class="form-control" name="cuartil_5"></td>
+          </tr>
+
+
+
+        </tbody>
+    </table>
+  </section>
+
+                    <!-- jQuery -->
+    <script src="/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="/js/popper.js"></script>
+    <script src="/js/bootstrap/bootstrap.min.js"></script>
+    <script src="/js/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="/js/owl-carousel.js"></script>
+    <script src="/js/scrollreveal.min.js"></script>
+    <script src="/js/waypoints.min.js"></script>
+    <script src="/js/jquery.counterup.min.js"></script>
+    <script src="/js/imgfix.min.js"></script>
+
+    <!-- Global Init -->
+    <script src="/js/custom.js"></script>
+
+    <script src="/js/Pop-up.js"></script>
+
+</main>
+

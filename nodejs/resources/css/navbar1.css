@@ -1,0 +1,200 @@
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans';
+    --text-primary: #000000; /*Color letra principal*/
+    --text-secondary: #ececec; /*Color letra secundaria al pasar mouse*/
+    --bg-primary: #ffffff;
+    --bg-secondary: #f1724c;
+    --transition-speed: 300ms;
+  }
+  
+
+  .navbar1 {
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width 300ms ease;
+  }
+  
+  .navbar1-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .nav1-item {
+    width: 100%;
+  }
+  
+  .nav1-item:last-child {
+    margin-top: auto;
+  }
+  
+  .nav1-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+  }
+
+  .nav2-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: var(--transition-speed);
+  }
+  
+  .nav1-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+  }
+  
+  .nav2-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+  }
+
+  .link-text {
+    display: none;
+    margin-left: 1rem;
+  }
+  
+  .nav1-link svg {
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+  }
+
+  .nav2-link svg {
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+  }
+  
+  .fa-primary {
+    color: #ff7eee;
+  }
+  
+  .fa-secondary {
+    color: #df49a6;
+  }
+  
+  .fa-primary,
+  .fa-secondary {
+    transition: var(--transition-speed);
+  }
+  
+  .logo-nav1 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    font-size: 1.5rem;
+    letter-spacing: 0.3ch;
+    width: 100%;
+  }
+  
+  .logo-nav1 svg {
+    transform: rotate(0deg);
+    transition: var(--transition-speed);
+  }
+  
+  .logo-nav1-text
+  {
+    display: inline;
+    position: absolute;
+    left: -999px;
+    transition: var(--transition-speed);
+  }
+  
+  .navbar1:hover .logo-nav1 svg {
+    transform: rotate(-180deg);
+  }
+  
+  /* Small screens */
+  @media only screen and (max-width: 600px) {
+    .navbar1 {
+      bottom: 0;
+      width: 100vw;
+      height: 5rem;
+    }
+  
+    .logo-nav1 {
+      display: none;
+    }
+  
+    .navbar1-nav {
+      flex-direction: row;
+    }
+  
+    .nav1-link {
+      justify-content: center;
+    }
+
+    .nav2-link {
+        justify-content: center;
+      }
+  
+    main {
+      margin: 0;
+    }
+  }
+  
+  /* Large screens - Dimensiones de Navbar */
+  @media only screen and (min-width: 600px) {
+    .navbar1 {
+      top: 300px;
+      width: 5rem;
+      height: 500px;
+    }
+  
+    .navbar1:hover {
+      width: 16rem;
+    }
+  
+    .navbar1:hover .link-text {
+      display: inline;
+    }
+  
+    .navbar1:hover .logo-nav1 svg
+    {
+      margin-left: 11rem;
+    }
+  
+    .navbar1:hover .logo-nav1-text
+    {
+      left: 0px;
+    }
+  }
+  
+  .theme-icon {
+    display: none;
+  }
+  
+  .dark #darkIcon {
+    display: block;
+  }
+  
+  .light #lightIcon {
+    display: block;
+  }
+  
+  .solar #solarIcon {
+    display: block;
+  }
+
+  /* VISIBILIDAD DE MODAL */
+
+  

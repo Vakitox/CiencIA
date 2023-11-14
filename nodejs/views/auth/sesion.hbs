@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Additional CSS Files -->
+
+    <link rel="stylesheet" href="/css/estilos.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/css/login.css">
+
+    
+
+    <title>Modern Login Page | AsmrProg</title>
+</head>
+
+<body>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky background-header">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12">
+                      <nav class="main-nav">
+                          <!-- ***** Logo Start ***** -->
+                          <a href="index.html" class="logo">
+                              Test
+                          </a>
+                          <!-- ***** Logo End ***** -->
+                          <!-- ***** Menu Start ***** -->
+                          <ul class="nav">
+                              <li class="scroll-to-section"><a href="/" style="aalign-items: end;"class="button-custom">Regresar</a></li>
+                          </ul>
+                          <a class='menu-trigger'>
+                              <span>Menu</span>
+                          </a>
+                          <!-- ***** Menu End ***** -->
+                      </nav>
+                  </div>
+              </div>
+          </div>
+      </header>
+    <!-- ***** Header Area End ***** -->
+
+    <div class="container_sesion" id="container">
+        <div class="form-container sign-up">
+            <form action="/registro" method="POST">
+                <h1>Crear cuenta</h1>
+                <span>Ingresa los datos requeridos</span><br>
+                <input type="text" name="nombres" placeholder="Nombres completos" required>
+                <input type="text" name="apellidos" placeholder="Apellidos completos" required>
+                <input type="text" name="pais" placeholder="País" required>
+                <input type="text" name="universidad" placeholder="Universidad" required>
+                <input type="text" name="carrera" placeholder="Área Profesional" required>
+                <input type="email" name="correo" placeholder="Correo Institucional" required>
+                <input type="password" name="contrasena" placeholder="Contraseña" required>
+                <button>Registrarse</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form action="/login" method="POST">
+                <h1>Sign In</h1>
+                <span>or use your email password</span>
+                <input type="email" name="correo" placeholder="Correo Institucional" autofocus required>
+                <input type="password" name="contrasena" placeholder="Contraseña" required>
+                <a href="#">Forget Your Password?</a>
+                <button>Entrar</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Bienvenido!</h1>
+                    <p>Si tienes una cuenta con tu correo institucional ingresa</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register with your personal details to use all of site features</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/login.js"></script>
+        <!-- jQuery -->
+    <script src="/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="/js/popper.js"></script>
+    <script src="/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="/js/owl-carousel.js"></script>
+    <script src="/js/scrollreveal.min.js"></script>
+    <script src="/js/waypoints.min.js"></script>
+    <script src="/js/jquery.counterup.min.js"></script>
+    <script src="/js/imgfix.min.js"></script>
+
+    <!-- Global Init -->
+    <script src="/js/custom.js"></script>
+</body>
+
+</html>
