@@ -13,7 +13,7 @@
 
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Generar Ecuación de Búsqueda</h1>
@@ -31,38 +31,39 @@
           <tbody>
             <tr>
               <td>Población</td>
-              <td>¿A qué grupo de personas aplica?</td>
-              <td><textarea class="form-control" name="población-picoc" required></textarea></td>
+              <td><textarea class="form-control" id="pregunta-población-picoc" placeholder="Ejm: ¿Cómo se ha definido la Cadena de Suministro?"></textarea></td>
+              <td><textarea class="form-control" id="población-picoc" placeholder="Ejm: *Artificial intelligence,factory automation,automation,supply chain management,Supply chain digitization*"></textarea></td>
             </tr>
             <tr>
               <td>Intervención</td>
-              <td>¿Cómo se hará?</td>
-              <td><textarea class="form-control" name="población-picoc" required></textarea></td>
+              <td><textarea class="form-control" id="pregunta-intervencion-picoc" placeholder="Ejm: ¿Qué tipos de metodologías o herramientas digitales de la Inteligencia Artificial se han aplicado?"></textarea></td>
+              <td><textarea class="form-control" id="intervencion-picoc" placeholder="Ejm: *Natural language processing systems,Enterprise information system,Cyber Physical System,Distributed computer systems,Internet of things*" required></textarea></td>
             </tr>
             <tr>
               <td>Comparación</td>
-              <td>¿Comparado con que?</td>
-              <td><textarea class="form-control" name="población-picoc" required></textarea></td>
+              <td><textarea class="form-control" id="pregunta-comparacion-picoc" placeholder="Ejm: ¿Qué tan eficaces han resultado en comparación con la aplicación de los cuestionarios u otros métodos de medición?"></textarea></td>
+              <td><textarea class="form-control" id="comparacion-picoc" placeholder="Ejm: *Online surveys,Surveys*" ></textarea></td>
             </tr>
             <tr>
               <td>Resultado</td>
-              <td>¿Qué quieres hacer?</td>
-              <td><textarea class="form-control" name="población-picoc" required></textarea></td>
+              <td><textarea class="form-control" id="pregunta-resultado-picoc" placeholder="Ejm: ¿Qué niveles de optimización han obtenido estos métodos y qué limitaciones han presentado?"></textarea></td>
+              <td><textarea class="form-control" id="resultado-picoc" placeholder="Ejm: *Product development,productivity,process engineering,production control,operation management,process automation*"></textarea></td>
             </tr>
             <tr>
               <td>Contexto</td>
-              <td>¿En qué contexto?</td>
-              <td><textarea class="form-control" name="población-picoc" required></textarea></td>
+              <td><textarea class="form-control" id="pregunta-contexto-picoc" placeholder="Ejm: ¿En qué tipo de empresas manufactureras se ha investigado, con qué poblaciones y muestras?"></textarea></td>
+              <td><textarea class="form-control" id="contexto-picoc" placeholder="Ejm: *Manufacturing industry,manufacturing sector,industrial management,manufacturing companies,intelligent manufacturing,manufacture,Smart manufacturing*"></textarea></td>
             </tr>
           </tbody>
         </table>
         <hr>
         <td>Ecuación de búsqueda</td>
-        <td><textarea class="form-control" name="respuesta" required></textarea></td>
+        <td><textarea class="form-control" id="ecuacion-picoc" required></textarea></td>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Generar ecuación</button>
+        <button id="generarEcuacion" type="button" class="btn btn-primary">Generar ecuación</button>
+        <script src="/js/ecuacion.js"></script>
       </div>
     </div>
   </div>
@@ -158,11 +159,12 @@
             <th scope="col">N°</th>
             <th scope="col">Nombre de investigación</th>
             <th scope="col">DOI</th>
+            <th scope="col">Cuartil (Q)</th>
             <th scope="col">Tipo de brecha</th>
             <th scope="col">Brechas de investigación</th>
-            <th scope="col">Resumen</th>
-            <th scope="col">Conclusiones</th>
-            <th scope="col">Cuartil (Q)</th>
+            <th scope="col">Tema propuesto</th>
+            <th scope="col">Innovación</th>
+          
                       </tr>
         </thead>
 
@@ -172,8 +174,9 @@
 
           <tr>
             <th scope="row">1</th>
-            <td><input type="text" class="form-control" name="nombre_investigacion_1"></td>
-            <td><input type="text" class="form-control" name="doi_1" required></td>
+            <td><textarea class="form-control" name="nombre_investigacion_1"></textarea></td>
+            <td><textarea class="form-control" name="doi_1"></textarea></td>
+            <td><input type="text" class="form-control" name="cuartil_1"></td>
             <td>
                 <select name="tipo_brecha_1" class="form-control">
                 <option value="1">Brecha de conocimiento</option>
@@ -184,16 +187,17 @@
                 </select>
             </td>
             <td><textarea class="form-control" name="brechas_inves_1"></textarea></td>
-            <td><input type="text" class="form-control" name="resumen_1"></td>
-            <td><input type="text" class="form-control" name="conclusiones_1"></td>
-            <td><input type="text" class="form-control" name="cuartil_1"></td>
+            <td><textarea class="form-control" name="resumen_1"></textarea></td>
+            <td><textarea class="form-control" name="conclusiones_1"></textarea></td>
+            
           </tr>
 
                                     <!-- Fila 2 -->
-                <tr>
+              <tr>
             <th scope="row">2</th>
-            <td><input type="text" class="form-control" name="nombre_investigacion_2"></td>
-            <td><input type="text" class="form-control" name="doi_2"></td>
+            <td><textarea class="form-control" name="nombre_investigacion_2"></textarea></td>
+            <td><textarea class="form-control" name="doi_2"></textarea></td>
+            <td><input type="text" class="form-control" name="cuartil_2"></td>
             <td>
                 <select name="tipo_brecha_2" class="form-control">
                 <option value="1">Brecha de conocimiento</option>
@@ -204,17 +208,18 @@
                 </select>
             </td>
             <td><textarea class="form-control" name="brechas_inves_2"></textarea></td>
-            <td><input type="text" class="form-control" name="resumen_2"></td>
-            <td><input type="text" class="form-control" name="conclusiones_2"></td>
-            <td><input type="text" class="form-control" name="cuartil_2"></td>
+            <td><textarea class="form-control" name="resumen_2"></textarea></td>
+            <td><textarea class="form-control" name="conclusiones_2"></textarea></td>
+            
           </tr>
 
                                     <!-- Fila 3 -->
 
-                <tr>
+                              <tr>
             <th scope="row">3</th>
-            <td><input type="text" class="form-control" name="nombre_investigacion_3"></td>
-            <td><input type="text" class="form-control" name="doi_3"></td>
+            <td><textarea class="form-control" name="nombre_investigacion_3"></textarea></td>
+            <td><textarea class="form-control" name="doi_3"></textarea></td>
+            <td><input type="text" class="form-control" name="cuartil_3"></td>
             <td>
                 <select name="tipo_brecha_3" class="form-control">
                 <option value="1">Brecha de conocimiento</option>
@@ -225,18 +230,19 @@
                 </select>
             </td>
             <td><textarea class="form-control" name="brechas_inves_3"></textarea></td>
-            <td><input type="text" class="form-control" name="resumen_3"></td>
-            <td><input type="text" class="form-control" name="conclusiones_3"></td>
-            <td><input type="text" class="form-control" name="cuartil_3"></td>
+            <td><textarea class="form-control" name="resumen_3"></textarea></td>
+            <td><textarea class="form-control" name="conclusiones_3"></textarea></td>
+            
           </tr>
 
           
                                     <!-- Fila 4 -->
 
-                <tr>
+                              <tr>
             <th scope="row">4</th>
-            <td><input type="text" class="form-control" name="nombre_investigacion_4"></td>
-            <td><input type="text" class="form-control" name="doi_4"></td>
+            <td><textarea class="form-control" name="nombre_investigacion_4"></textarea></td>
+            <td><textarea class="form-control" name="doi_4"></textarea></td>
+            <td><input type="text" class="form-control" name="cuartil_4"></td>
             <td>
                 <select name="tipo_brecha_4" class="form-control">
                 <option value="1">Brecha de conocimiento</option>
@@ -247,18 +253,19 @@
                 </select>
             </td>
             <td><textarea class="form-control" name="brechas_inves_4"></textarea></td>
-            <td><input type="text" class="form-control" name="resumen_4"></td>
-            <td><input type="text" class="form-control" name="conclusiones_4"></td>
-            <td><input type="text" class="form-control" name="cuartil_4"></td>
+            <td><textarea class="form-control" name="resumen_4"></textarea></td>
+            <td><textarea class="form-control" name="conclusiones_4"></textarea></td>
+            
           </tr>
 
           
                                     <!-- Fila 5 -->
 
-                <tr>
+                              <tr>
             <th scope="row">5</th>
-            <td><input type="text" class="form-control" name="nombre_investigacion_5"></td>
-            <td><input type="text" class="form-control" name="doi_5"></td>
+            <td><textarea class="form-control" name="nombre_investigacion_5"></textarea></td>
+            <td><textarea class="form-control" name="doi_5"></textarea></td>
+            <td><input type="text" class="form-control" name="cuartil_5"></td>
             <td>
                 <select name="tipo_brecha_5" class="form-control">
                 <option value="1">Brecha de conocimiento</option>
@@ -269,9 +276,9 @@
                 </select>
             </td>
             <td><textarea class="form-control" name="brechas_inves_5"></textarea></td>
-            <td><input type="text" class="form-control" name="resumen_5"></td>
-            <td><input type="text" class="form-control" name="conclusiones_5"></td>
-            <td><input type="text" class="form-control" name="cuartil_5"></td>
+            <td><textarea class="form-control" name="resumen_5"></textarea></td>
+            <td><textarea class="form-control" name="conclusiones_5"></textarea></td>
+            
           </tr>
 
 
