@@ -9,6 +9,66 @@
 
 <main>
 
+<!-- MODAL PICO -->
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Generar Ecuación de Búsqueda</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table>
+          <thead>
+            <tr>
+              <th>PICOC</th>
+              <th>PREGUNTAS</th>
+              <th>PALABRAS CLAVE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Población</td>
+              <td>¿A qué grupo de personas aplica?</td>
+              <td><textarea class="form-control" name="población-picoc" required></textarea></td>
+            </tr>
+            <tr>
+              <td>Intervención</td>
+              <td>¿Cómo se hará?</td>
+              <td><textarea class="form-control" name="población-picoc" required></textarea></td>
+            </tr>
+            <tr>
+              <td>Comparación</td>
+              <td>¿Comparado con que?</td>
+              <td><textarea class="form-control" name="población-picoc" required></textarea></td>
+            </tr>
+            <tr>
+              <td>Resultado</td>
+              <td>¿Qué quieres hacer?</td>
+              <td><textarea class="form-control" name="población-picoc" required></textarea></td>
+            </tr>
+            <tr>
+              <td>Contexto</td>
+              <td>¿En qué contexto?</td>
+              <td><textarea class="form-control" name="población-picoc" required></textarea></td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+        <td>Ecuación de búsqueda</td>
+        <td><textarea class="form-control" name="respuesta" required></textarea></td>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Generar ecuación</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <!-- MODAL DE INICIO DE PAGINA -->
 
 <div class="pop-up">
@@ -64,9 +124,14 @@
         </div>
     </div>
 
-
+<!-- FIN MODAL -->
 
   <section class="table__body">
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Preguntas PICOC
+    </button>
 
     <input type="button" value="Ver Instrucciones" class="btn-abrir">
 

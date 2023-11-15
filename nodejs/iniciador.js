@@ -15,7 +15,7 @@ const app = express();
 require('./lib/passport');
 
 //Configuración
-app.set('port', process.env.PORT || 6000);
+app.set('port', process.env.PORT || 6500);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', engine({
   defaultLayout: 'main',
