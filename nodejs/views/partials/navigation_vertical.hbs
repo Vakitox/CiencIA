@@ -191,14 +191,14 @@
 
   <!-- Modal DOI -->
   <div class="modal fade" id="staticBackdropDoi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="staticBackdropLabel">¿Como obtener el enlace DOI?</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <iframe width="600" height="400" src="https://www.scimagojr.com/"></iframe>
+          <iframe width="760" height="600" src="https://www.youtube.com/embed/Pu9uzDNxMhA?si=OV3ipLMs7ZUBy_9W" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -206,18 +206,34 @@
 
 
   <div class="modal fade" id="staticBackdropScimago" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">¿Como obtener el Cuartil (Q)?</h1>
+          <h1 class="modal-title fs-5" style="text-align:center" id="staticBackdropLabel">¿Como obtener el Cuartil (Q)?</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <iframe src="https://www.youtube.com/embed/hQAYHx2ymN0?si=HhncfzouysrE2Go9&amp;start=16" width="460" height="300" allowfullscreen></iframe>
+          <iframe width="760" height="600" src="https://www.youtube.com/embed/hQAYHx2ymN0?si=HhncfzouysrE2Go9&amp;start=16" allowfullscreen></iframe>
         </div>
         <div class="modal-footer" style="justify-content: center">
-          <a href="https://www.scimagojr.com/" class="btn btn-danger" target="_blank">Ir a Scimago</a>
+          <button type="button" class="btn-primary" data-bs-dismiss="modal" aria-label="Close" onclick="$('#staticBackdropScimagoPage').modal('show')">Abrir Schimago</button>
         </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="staticBackdropScimagoPage" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" style="text-align:center" id="staticBackdropLabel">¿Como obtener el Cuartil (Q)?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <button type="button" onclick="history.back()">Volver</button>
+          <iframe width="760" height="600" src="https://www.scimagojr.com/"></iframe>
+        </div>
+
       </div>
     </div>
   </div>
