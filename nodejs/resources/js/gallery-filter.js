@@ -1,5 +1,6 @@
 (function(){
 
+
     'use strict';
 
 
@@ -9,6 +10,11 @@
         itemSelector: '.item',
         layoutMode: 'fitRows'
     });
+
+    $(document).ready(function() {
+        var filter = $(this).attr('data-filter');
+        $projects.isotope({ filter: filter });
+      });
 
     $('ul.filters-gallery > li').on('click', function(e){
 
@@ -36,3 +42,4 @@
     });
 
 })(jQuery);
+

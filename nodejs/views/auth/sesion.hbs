@@ -49,12 +49,25 @@
 
     <div class="container_sesion" id="container">
         <div class="form-container sign-up">
-            <form action="/registro" method="POST">
+            <form action="/registro" method="POST" name="registro">
                 <h1>Crear cuenta</h1>
                 <span>Ingresa los datos requeridos</span><br>
                 <input type="text" name="nombres" placeholder="Nombres completos" required>
                 <input type="text" name="apellidos" placeholder="Apellidos completos" required>
-                <input type="text" name="pais" placeholder="País" required>
+                <div class="wrapper">
+                    <div class="select-btn">
+                        <span>País</span>
+                        <i class="uil uil-angle-down"></i>
+                    </div>
+                    <div class="content">
+                        <div class="search">
+                        <i class="uil uil-search"></i>
+                        <input spellcheck="false" type="text" placeholder="Buscar">
+                        </div>
+                        <ul class="options"></ul>
+                    </div>
+                </div>
+                <input type="text" name="pais" style="display: none;">
                 <input type="text" name="universidad" placeholder="Universidad" required>
                 <input type="text" name="carrera" placeholder="Área Profesional" required>
                 <input type="email" name="correo" placeholder="Correo Institucional" required>
@@ -62,6 +75,7 @@
                 <button>Registrarse</button>
             </form>
         </div>
+        
         <div class="form-container sign-in">
             <form action="/login" method="POST">
                 <h1>Iniciar sesión</h1>

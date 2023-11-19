@@ -111,3 +111,8 @@ h4.title-gallery{
     background-color: #28bea8;
     color: #fff;
 }
+
+.projects {
+    position: relative !important;
+    height: 967.719px !important; 
+}
