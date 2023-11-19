@@ -264,7 +264,6 @@ a.button-custom a.active {
     width: 100%;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     background: rgba(255, 255, 255, 0.959)
 }
@@ -284,7 +283,7 @@ a.button-custom a.active {
     z-index: 888;
     color: #fff;
     width: 60%;
-    margin-top: 50px;
+    margin-top: 250px;
     padding: 200px;
     display: none;
 }

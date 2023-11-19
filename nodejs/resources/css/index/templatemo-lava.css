@@ -656,6 +656,10 @@ header
   #promotion {
     padding-bottom: 1700px !important;
   }
+
+  .responsive1 {
+    src: url(/images/fondo1_responsive.jpg);
+  }
 }
 
 @media screen and (max-width: 360px) {

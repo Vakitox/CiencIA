@@ -22,9 +22,22 @@
         
 
        <section class="home">
-        <img class="video-slide active" src="/images/fondo1.jpg" data-aos="fade-left"> 
-        <img class="video-slide" src="/images/fondo2.jpg"> 
-        <img class="video-slide" src="/images/fondo3.jpg"> 
+        <picture>
+            <source media="(max-width: 412px)" srcset="/images/fondo1_responsive.jpg">
+            <img class="video-slide responsive1 active" src="/images/fondo1.jpg">
+        </picture>
+
+        <picture>
+            <source media="(max-width: 412px)" srcset="/images/fondo2_responsive.jpg">
+            <img class="video-slide responsive2" src="/images/fondo2.jpg"> 
+        </picture>
+
+        <picture>
+            <source media="(max-width: 412px)" srcset="/images/fondo3_responsive.jpg">
+            <img class="video-slide responsive3" src="/images/fondo3.jpg"> 
+        </picture>
+
+
         
         <div class="content active" data-aos="fade-right">
           <h1>Kakashi.<br><span>Ninja Man</span></h1>

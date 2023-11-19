@@ -63,6 +63,7 @@
 					$('.menu-trigger').removeClass('active');
 					$('.header-area .nav').slideUp(200);
 				}
+				if (width)
 				$('html,body').animate({
 					scrollTop: (target.offset().top)
 				}, 700, 'swing', function () {
