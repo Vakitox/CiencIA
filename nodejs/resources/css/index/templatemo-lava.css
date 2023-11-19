@@ -652,6 +652,21 @@ header
   }
 }
 
+@media screen and (max-width: 412px) {
+  #promotion {
+    padding-bottom: 1700px !important;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #promotion {
+    padding-bottom: 1400px !important;
+  }
+
+  .projects p{
+    font-size: 9.5px !important;
+  }
+}
 
 /* 
 ---------------------------------------------
@@ -816,7 +831,8 @@ promotion
 }
 
 #promotion {
-  padding: 100px 0px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 #promotion .left-image {
@@ -849,7 +865,6 @@ promotion
   margin-bottom: 15px;
   margin-top: 3px;
 }
-
 
 /*Slider */
 
