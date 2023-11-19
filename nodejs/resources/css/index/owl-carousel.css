@@ -46,6 +46,11 @@
     -webkit-backface-visibility: hidden;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none; }
+
+  .owl-carousel .owl-item:hover {
+    cursor: pointer;
+  }
+
   .owl-carousel .owl-item img {
     display: block;
     width: 100%; }

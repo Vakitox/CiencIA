@@ -652,13 +652,21 @@ header
   }
 }
 
-@media screen and (max-width: 412px) {
+@media (max-width: 412px) {
   #promotion {
     padding-bottom: 1700px !important;
   }
 
-  .responsive1 {
-    src: url(/images/fondo1_responsive.jpg);
+  .video-slide{
+    height: 85% !important;
+  }
+
+  .home .content h1 span {
+    font-size: 1em !important;
+  }
+
+  .home .content {
+    margin-top: 70px !important;
   }
 }
 
