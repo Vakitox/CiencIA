@@ -422,3 +422,13 @@ a.button-custom a.active {
         line-height: 60px;
     }
 }
+
+/* MODAL DIALOG SCHIMAGO */
+.modal-dialog-custom {
+    max-width: 90% !important;
+}
+
+.modal-content-custom {
+    width: 100% !important;
+    height: 100% !important;
+}

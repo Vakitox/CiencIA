@@ -1,3 +1,13 @@
+const $content = document.getElementById('ecuacion-picoc'),
+      $btn = document.getElementById('copiarTextoPicoc');
+
+
+// Agregar el evento al botón
+$btn.addEventListener("click", () => {
+    $content.select();
+    document.execCommand('copy');
+  });
+
 generarEcuacion.addEventListener("click", () => {
 
     let textarea = document.getElementById("ecuacion-picoc");
