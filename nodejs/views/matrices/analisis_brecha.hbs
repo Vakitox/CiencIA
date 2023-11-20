@@ -1,6 +1,7 @@
 <head>
   <script src="/js/Pop-up.js"></script>
   <link rel="stylesheet" href="/css/matrices_brechas.css">
+  <link rel="stylesheet" href="/css/bootstrap/bootstrap-icons.css">
   <link rel="stylesheet" href="/css/pop-up.css">
 </head>
 
@@ -16,7 +17,7 @@
   <div class="modal-dialog modal-xl modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Generar Ecuación de Búsqueda</h1>
+        <h1 class="modal-title fs-5 ">Título de tema de investigación: <input id="titulo-picoc" style="width: 600px" required></h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -24,8 +25,8 @@
           <thead>
             <tr>
               <th>PICOC</th>
-              <th>PREGUNTAS</th>
-              <th>PALABRAS CLAVE</th>
+              <th>PREGUNTASㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill"></i></th>
+              <th>PALABRAS CLAVEㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill"></i></th>
             </tr>
           </thead>
           <tbody>
@@ -111,7 +112,7 @@
                     </div>
                   </div>
                 </div>
-                <i class="far fa-times-circle" id="close"></i>
+                <i class="bi bi-x-square-fill" id="close"></i>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
@@ -134,14 +135,13 @@
       Preguntas PICOC
     </button>
 
-    <input type="button" value="Ver Instrucciones" class="btn-abrir">
+    <input type="button" value="Ver Instrucciones" class="btn btn-danger btn-abrir">
 
     <table class="table_matriz table-striped">
       <section class="table__cabecera">
-          <br><br> <h1 style="text-align:center">Matriz de Análisis de Brechas del Problema</h1>
+          <br><br><h1 style="text-align:center" id="titulo-matriz"></h1><br>
 
-          
-          <div class="export__file">
+          <!-- <div class="export__file">
               <label for="export-file" class="export__file-btn" title="Export File"></label>
               <input type="checkbox" id="export-file">
               <div class="export__file-options">
@@ -151,19 +151,20 @@
                   <label for="export-file" id="toCSV">CSV <img src="images/csv.png" alt=""></label>
                   <label for="export-file" id="toEXCEL">EXCEL <img src="images/excel.png" alt=""></label>
               </div>
-          </div>
+          </div> -->
+          
         </section>
 
         <thead>
           <tr>
             <th scope="col">N°</th>
-            <th scope="col">Nombre de investigación</th>
-            <th scope="col">DOI</th>
-            <th scope="col">Cuartil (Q)</th>
-            <th scope="col">Tipo de brecha</th>
-            <th scope="col">Brechas de investigación</th>
-            <th scope="col">Tema propuesto</th>
-            <th scope="col">Innovación</th>
+            <th scope="col" >Nombre de investigaciónㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill"></i></th>
+            <th scope="col">DOIㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill"></i></th>
+            <th scope="col">Cuartil (Q)ㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill"></i></th>
+            <th scope="col">Tipo de brechaㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill"></i></th>
+            <th scope="col">Brechas de investigaciónㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill"></i></th>
+            <th scope="col">Tema propuestoㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill"></i></th>
+            <th scope="col">Innovaciónㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill"></i></th>
           
                       </tr>
         </thead>

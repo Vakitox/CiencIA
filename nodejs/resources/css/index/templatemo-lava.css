@@ -297,7 +297,7 @@ header
 .header-area .main-nav .nav {
   float: left;
   margin-top: 27px;
-  margin-left: 25%;
+  margin-left: 20%;
   margin-right: 0px;
   padding: 0px 20px;
   -webkit-transition: all 0.3s ease 0s;
@@ -998,8 +998,7 @@ testimonials
   line-height: 80px;
   text-align: center;
   display: inline-block;
-  background: rgb(244,129,63);
-  background: linear-gradient(145deg, rgba(244,129,63,1) 0%, rgba(241,85,106,1) 100%);
+  background: #fba70b;
   position: absolute;
 }
 
@@ -1015,8 +1014,7 @@ testimonials
   line-height: 80px;
   text-align: center;
   display: inline-block;
-  background: rgb(244,129,63);
-  background: linear-gradient(145deg, rgba(244,129,63,1) 0%, rgba(241,85,106,1) 100%);
+  background: #fba70b;
   position: absolute;
 }
 

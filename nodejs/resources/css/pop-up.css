@@ -12,11 +12,6 @@
 }
 
 .btn-abrir{
-    background: #0063a5;
-    color:#fff;
-    padding: 10px;
-    display: inline-block;
-    border: none;
     cursor: pointer;
 }
 
@@ -174,7 +169,7 @@
     top: -50px;
     right: 0px;
     font-size: 25px;
-    color: #1bc59b;
+    color: #000000;
     cursor: pointer;
 }
 
@@ -201,5 +196,5 @@
 }
 
 .carousel-indicators [data-bs-target] {
-    background-color: #fba70b;
+    background-color: #000000;
 }
