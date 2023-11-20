@@ -68,7 +68,14 @@
   }
   
   .table__cabecera {
+    display: flex;
+    justify-content: center;
     width: 100%;
+    padding-bottom: 10px;
+  }
+
+  .btn-primary-custom{
+    margin:10px;
   }
   
   .table__header {
