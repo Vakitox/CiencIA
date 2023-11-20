@@ -41,7 +41,7 @@
   
       overflow: auto;
       overflow: initial;
-      margin-top: 300px;
+      margin-top: 200px;
   }
   
   .table__body::-webkit-scrollbar{
