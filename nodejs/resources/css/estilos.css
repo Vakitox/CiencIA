@@ -432,3 +432,18 @@ a.button-custom a.active {
     width: 100% !important;
     height: 100% !important;
 }
+
+/* VISTA PROYECTOS */
+
+.container_proyectos{
+    padding-top: 80px;
+    padding-bottom: 400px;
+}
+
+.list-group-item {
+    padding: 20px !important;
+}
+
+.titulo_proyectos{
+    padding-top: 200px;
+}

@@ -1,14 +1,10 @@
 const express = require ('express');
 const router = express.Router();
+const { noestaLogeado } = require('../lib/auth');
 
 const db = require('../database');
 
 const { estaLogeado } = require('../lib/auth');
-
-/*router.post('/login', (req, res) =>{
-    console.log(req.body);
-    res.send('recibido');
-});*/
 
 router.get('/matrices', estaLogeado, (req, res) => {
     res.render('links/matrices');
@@ -18,6 +14,9 @@ router.get('/analisis_brechas', estaLogeado, (req, res) => {
     res.render('matrices/analisis_brecha');
 });
 
+router.get('/publicaciones', noestaLogeado, (req, res) => {
+    res.render('investigaciones/proyectos');
+});
 
 
 module.exports = router;
