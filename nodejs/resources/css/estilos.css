@@ -447,12 +447,6 @@ a.button-custom a.active {
     padding-top: 200px;
 }
 
-/* MODAL PDFS */
-
-.modal-dialog {
-    max-width: 1500px;
-}
-
 /* CUSTOM TOOLTIP*/
 .custom-tooltip-class {
     --bs-tooltip-bg: #ffc13a;
