@@ -18,6 +18,10 @@ router.get('/publicaciones', noestaLogeado, (req, res) => {
     res.render('investigaciones/proyectos');
 });
 
+router.get('/recursos', noestaLogeado, (req, res) => {
+    res.render('recursos/recursos');
+});
+
 
 module.exports = router;
 

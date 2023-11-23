@@ -97,7 +97,6 @@ a.button-custom a.active {
     box-sizing: border-box;
     outline: none; border:none;
     text-decoration: none;
-    transition: .2s linear;
 }
 
 .container_bd{
@@ -447,3 +446,18 @@ a.button-custom a.active {
 .titulo_proyectos{
     padding-top: 200px;
 }
+
+/* MODAL PDFS */
+
+.modal-dialog {
+    max-width: 1500px;
+}
+
+/* CUSTOM TOOLTIP*/
+.custom-tooltip-class {
+    --bs-tooltip-bg: #ffc13a;
+    --bs-tooltip-color: white;
+    --bs-tooltip-opacity: 1;
+    --bs-tooltip-padding-y: 10px;
+    --bs-tooltip-padding-x: 10px;
+  }
