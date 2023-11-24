@@ -64,7 +64,7 @@
   }
   
   thead th:hover {
-    color: rgba(255, 255, 255, 0.849);
+    color: #fba70b;
   }
   
   .table__cabecera {
@@ -72,7 +72,7 @@
     justify-content: center;
     width: 100%;
     padding: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 50px;
   }
 
   .btn-primary-custom{

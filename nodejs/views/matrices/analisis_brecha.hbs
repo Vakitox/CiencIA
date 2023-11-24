@@ -13,7 +13,6 @@
 
 <!-- MODAL PICO -->
 
-
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl modal-dialog-centered">
     <div class="modal-content">
@@ -25,9 +24,9 @@
         <table>
           <thead>
             <tr>
-              <th>PICOC</th>
-              <th>PREGUNTASㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill"></i></th>
-              <th>PALABRAS CLAVEㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill"></i></th>
+              <th>PICOCㅤ<i style="color: rgb(255, 81, 81)" class="bi bi-info-circle-fill" type="button"></i></th>
+              <th>PREGUNTASㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-class" data-bs-placement="top" data-bs-title="Las preguntas tienen que ir en relación a tu tema de investigación previamente escogido, te servirán para formular tus palabras clave."></i></th>
+              <th>PALABRAS CLAVEㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-class" data-bs-placement="top" data-bs-title="Las palabras clave tienen que ir separadas por una coma y un espacio ',    ' por ejemplo: Palabra1, Palabra2, Palabra3, etc. Caso contrario la ecuación se generará de forma incorrecta."></i></th>
             </tr>
           </thead>
           <tbody>
@@ -65,13 +64,13 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button id="copiarTextoPicoc" type="button" class="btn btn-danger">Copiar ecuación</button>
-        <button id="generarEcuacion" type="button" class="btn btn-primary">Generar ecuación</button>
+        <button id="generarEcuacion" type="button" class="btn btn-primary">Generar ecuación Scopus</button>
         <script src="/js/ecuacion.js"></script>
       </div>
     </div>
   </div>
-</div>
 
+</div>
 
 <!-- MODAL DE INICIO DE PAGINA -->
 
@@ -172,10 +171,10 @@
           <tr>
             <th scope="col">N°</th>
 
-            <th scope="col" >Nombre de investigaciónㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-class" data-bs-placement="top" data-bs-title="Prueba de Tooltip"></i></th>
+            <th scope="col" >Nombre de investigaciónㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-class" data-bs-placement="top" data-bs-title="Título del artículo de investigación encontrado con tu ecuación en la base de datos escogida"></i></th>
 
-            <th scope="col">DOIㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-class" data-bs-placement="top" data-bs-title="Prueba de Tooltip 1"></i></th>
-            <th scope="col">Cuartil (Q)ㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-class" data-bs-placement="top" data-bs-title="Prueba de Tooltip 2"></i></th>
+            <th scope="col">DOIㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-class" data-bs-placement="top" data-bs-title="Identificador único de 16 caracteres de un objeto digital, lo puedes encontrar en la página de tu artículo de investigación. Revisa la guía en el menú izquierdo de ayuda."></i></th>
+            <th scope="col">Cuartil (Q)ㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-class" data-bs-placement="top" data-bs-title="Se utiliza para clasificar las revistas científicas en función de su impacto. Revisa la guía en el menú izquierdo de ayuda."></i></th>
             <th scope="col">Tipo de brechaㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-class" data-bs-placement="top" data-bs-title="Prueba de Tooltip 3"></i></th>
             <th scope="col">Brechas de investigaciónㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-class" data-bs-placement="top" data-bs-title="Prueba de Tooltip 4"></i></th>
             <th scope="col">Tema propuestoㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-class" data-bs-placement="top" data-bs-title="Prueba de Tooltip 5"></i></th>
@@ -347,6 +346,7 @@
         </tbody>
     </table>
   </section>
+
 
                     <!-- jQuery -->
     <script src="/js/jquery-3.7.1.min.js"></script>

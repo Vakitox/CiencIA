@@ -43,28 +43,29 @@ passport.use('local.login', new LocalStrategy({
     }
 }));*/
 
-
 passport.use('local.registro', new LocalStrategy({
-    usernameField: 'correo',
-    passwordField: 'contrasena',
-    passReqToCallback: true
+  
+  usernameField: 'correo',
+  passwordField: 'contrasena',
+  passReqToCallback: true
 }, async (req, correo, contrasena, done) => {
-    const permisos = 1;
-    const { nombres, apellidos, pais, universidad, carrera } = req.body;
-    const newUser = {
-        nombres,
-        apellidos,
-        pais,
-        universidad,
-        carrera,
-        correo,
-        contrasena,
-        permisos
-    };
-    newUser.contrasena = await helpers.encryptPassword(contrasena);
-    const result = await db.query('INSERT INTO Usuarios set ?', [newUser]);
-    newUser.idUsuarios = result.insertId;
-    return done(null, newUser);
+  const permisos = 1;
+  const { nombres, apellidos, pais, universidad, carrera } = req.body;
+  const newUser = {
+      nombres,
+      apellidos,
+      pais,
+      universidad,
+      carrera,
+      correo,
+      contrasena,
+      permisos
+  };
+  newUser.contrasena = await helpers.encryptPassword(contrasena);
+  const result = await db.query('INSERT INTO Usuarios set ?', [newUser]);
+  newUser.idUsuarios = result.insertId;
+
+  return done(null, newUser);
 }));
 
 passport.serializeUser((user, done) => {
