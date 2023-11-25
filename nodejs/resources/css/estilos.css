@@ -263,6 +263,7 @@ a.button-custom a.active {
     margin-top: 250px;
     padding: 200px;
     display: none;
+    z-index: 0;
 }
 
 .home .content.active{
