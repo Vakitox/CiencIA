@@ -1,0 +1,222 @@
+/* Carousel.css */
+
+@media (max-width: 820px){
+    .img-slider{
+    width: 600px;
+    height: 375px;
+    }
+    .img-slider .slide .info{
+    padding: 10px 25px;
+    }
+    .img-slider .slide .info h2{
+    font-size: 35px;
+    }
+    .img-slider .slide .info p{
+    width: 70%;
+    font-size: 15px;
+    }
+    .img-slider .navigation{
+    bottom: 25px;
+    }
+    .img-slider .navigation .boton{
+    width: 10px;
+    height: 10px;
+    margin: 8px;
+    }
+}
+
+@media (max-width: 620px){
+    .img-slider{
+    width: 400px;
+    height: 250px;
+    }
+    .img-slider .slide .info{
+    padding: 10px 20px;
+    }
+    .img-slider .slide .info h2{
+    font-size: 30px;
+    }
+    .img-slider .slide .info p{
+    width: 80%;
+    font-size: 13px;
+    }
+    .img-slider .navigation{
+    bottom: 15px;
+    }
+    .img-slider .navigation .boton{
+    width: 8px;
+    height: 8px;
+    }
+}
+
+/* Estilos.css */
+
+@media (max-width:768px){
+    .container_bd{
+        padding:20px;
+    }
+}
+
+
+@media (max-width: 580px) {
+	.animated-info {
+		min-width: 200px;
+	}
+  .animated-item {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+    .animated-text {
+      margin-top: 0;
+    }
+}
+
+@media (max-width: 1040px){
+    header{
+        padding: 12px 20px;
+    }
+    .home{
+        padding: 100px 0px;
+    }
+    .home .media-icons{
+        right: 15px;
+    }
+    .home .content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 560px){
+    .home .content h1{
+        font-size: 3em;
+        line-height: 60px;
+    }
+}
+
+/* Login.css */
+
+@media screen and (max-width: 804px){
+
+    .container_sesion {
+        max-width: 95%;
+        min-height: 670px;
+    }
+
+}
+
+/* Matrices.css */
+
+@media (max-width:768px){
+    .containers-matrices{
+        padding:20px;
+    }
+}
+
+/* Navbar.css */
+
+@media (max-width: 1200px) {
+    .header-area .main-nav .nav li {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    .header-area .main-nav:before {
+      display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .header-area .main-nav .nav {
+        display: flex !important;
+    }
+}
+
+@media (max-width: 810px) {
+    .welcome-area {
+    background-size: contain;
+    }
+
+    .welcome-area .header-text {
+    padding-top: 100%;
+    margin-left: 0;
+    }
+    
+    .container-fluid .col-md-12 {
+    margin-right: 0px;
+    padding-right: 0px;
+    }
+}
+
+/* Navbar1*/
+
+  /* ---- Small screens ---- */
+  @media only screen and (max-width: 600px) {
+    .navbar1 {
+      bottom: 0;
+      width: 100vw;
+      height: 5rem;
+    }
+  
+    .logo-nav1 {
+      display: none;
+    }
+  
+    .navbar1-nav {
+      flex-direction: row;
+    }
+  
+    .nav1-link {
+      justify-content: center;
+    }
+
+    .nav2-link {
+        justify-content: center;
+      }
+  
+    main {
+      margin: 0;
+    }
+  }
+
+  /* Large screens - Dimensiones de Navbar */
+  @media only screen and (min-width: 600px) {
+    .navbar1 {
+      top: 300px;
+      width: 5rem;
+      height: 500px;
+    }
+  
+    .navbar1:hover {
+      width: 16rem;
+    }
+  
+    .navbar1:hover .link-text {
+      display: inline;
+    }
+  
+    .navbar1:hover .logo-nav1 svg
+    {
+      margin-left: 11rem;
+    }
+  
+    .navbar1:hover .logo-nav1-text
+    {
+      left: 0px;
+    }
+  }
+
+  /* Pop-Up.css */
+
+  
+@media only screen and (max-width: 980px){
+    .pop-up-title{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .sub-content h2{
+        font-size: 30px;
+    }
+}

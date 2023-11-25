@@ -161,12 +161,6 @@ a.button-custom a.active {
     transform: scale(1.03);
 }
 
-@media (max-width:768px){
-    .container_bd{
-        padding:20px;
-    }
-}
-
 /*TEXTO ANIMADO*/
 
 .animated {
@@ -210,21 +204,6 @@ a.button-custom a.active {
   .animated-item {
     font-size: 50px;
   }
-
-  @media (max-width: 580px) {
-	.animated-info {
-		min-width: 200px;
-	}
-  .animated-item {
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 320px) {
-    .animated-text {
-      margin-top: 0;
-    }
-}
 
 @keyframes BottomTotop {
     0% {
@@ -279,7 +258,6 @@ a.button-custom a.active {
 }
 
 .home .content{
-    z-index: 888;
     color: #fff;
     width: 60%;
     margin-top: 250px;
@@ -396,30 +374,6 @@ a.button-custom a.active {
     clip-path: circle(150% at 0 50%);
     transition: 2s ease;
     transition-property: clip-path;
-}
-
-@media (max-width: 1040px){
-    header{
-        padding: 12px 20px;
-    }
-    .home{
-        padding: 100px 0px;
-    }
-    .home .media-icons{
-        right: 15px;
-    }
-    .home .content {
-        padding: 20px;
-    }
-
-
-}
-
-@media (max-width: 560px){
-    .home .content h1{
-        font-size: 3em;
-        line-height: 60px;
-    }
 }
 
 /* MODAL DIALOG SCHIMAGO */
