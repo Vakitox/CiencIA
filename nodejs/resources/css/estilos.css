@@ -259,7 +259,7 @@ a.button-custom a.active {
 
 .home .content{
     color: #fff;
-    width: 60%;
+    width: 55%;
     margin-top: 250px;
     padding: 200px;
     display: none;
@@ -333,7 +333,7 @@ a.button-custom a.active {
 }
 
 .slider-navigation{
-    z-index: 888;
+    z-index: 0;
     position: relative;
     display: flex;
     justify-content: center;

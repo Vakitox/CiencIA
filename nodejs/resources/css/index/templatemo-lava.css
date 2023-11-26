@@ -240,7 +240,7 @@ header
 }
 
 .background-header {
-  background-color: #dee2e6;
+  background-color: #4633af;
   height: 80px!important;
   position: fixed!important;
   top: 0px;
@@ -253,10 +253,10 @@ header
 
 }
 
-.background-header .logo,
+/*.background-header .logo,
 .background-header .main-nav .nav li a {
   color: #000000!important;
-}
+}*/
 
 .background-header .main-nav .nav li:hover a {
   color: #fba70b!important;
