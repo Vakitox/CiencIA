@@ -129,6 +129,37 @@
 
 <!-- FIN MODAL -->
 
+<!-- MODAL ESTADO DEL ARTE -->
+
+<div class="modal fade" id="ModalEstadoArte" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 ">Selección de tema por medio de archivo .BIB</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+            <h2>Subir archivo .bib</h2>
+            <form id="upload-form">
+                <input type="file" id="bib-file" accept=".bib"><br><br>
+                <button type="submit">Cargar Archivo</button>
+            </form>
+            <div id="organized-bib">
+            </div>
+            <script src="/js/brechasbib.js"></script>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button id="generarSeleccion" type="button" class="btn btn-danger">Generar Selección</button>
+        <script src="/js/cargarbibtablas.js"></script>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL DE ESTADO DEL ARTE-->
+
+
 
   <section class="table__body">
 
@@ -148,6 +179,8 @@
             <button type="button" class="btn btn-primary btn-primary-custom" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Metodología PICOC
             </button>
+
+            <input type="button" value="Generar Estado del Arte" class="btn btn-dark btn-primary-custom" data-bs-toggle="modal" data-bs-target="#ModalEstadoArte">
 
             <input type="button" value="Brechas de Ingeniería" class="btn btn-secondary btn-primary-custom">
 
