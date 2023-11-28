@@ -133,7 +133,7 @@
           <iframe width="760" height="600" src="https://www.youtube.com/embed/7YFEyIeLaiY?si=5-lUT3GCojB6H7ij&amp;start=16" allowfullscreen></iframe>
         </div>
         <div class="modal-footer" style="justify-content: center">
-          <button type="button" class="btn-primary" data-bs-dismiss="modal" aria-label="Close" onclick="window.open('https://www.scopus.com/search/form.uri?display=basic#basic', '_blank');">Abrir Scopus</button>
+          <button type="button" class="btn-primary" data-bs-dismiss="modal" aria-label="Close" onclick="$('#staticBackdropScopusPage').modal('show')">Abrir Scopus</button>
         </div>
       </div>
     </div>
@@ -150,7 +150,21 @@
           <button type="button" onclick="history.back()">Retroceder Página</button>
           <iframe width="100%" height="100%" src="https://www.scimagojr.com/"></iframe>
         </div>
+      </div>
+    </div>
+  </div>
 
+    <div class="modal fade" id="staticBackdropScopusPage" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" style="max-width: 90% !important;">
+      <div class="modal-content" style="width: 100% !important; height: 100% !important;">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" style="text-align:center" id="staticBackdropLabel">Scimago Journal & Country Rank</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <button type="button" onclick="history.back()">Retroceder Página</button>
+          <iframe width="100%" height="100%" src="https://www.scopus.com?igu=1"></iframe>
+        </div>
       </div>
     </div>
   </div>

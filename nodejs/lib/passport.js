@@ -62,6 +62,7 @@ passport.use('local.registro', new LocalStrategy({
       permisos
   };
   newUser.contrasena = await helpers.encryptPassword(contrasena);
+  console.log([newUser]);
   const result = await db.query('INSERT INTO Usuarios set ?', [newUser]);
   newUser.idUsuarios = result.insertId;
 

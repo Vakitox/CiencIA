@@ -129,7 +129,7 @@
 
 <!-- FIN MODAL -->
 
-<!-- MODAL ESTADO DEL ARTE -->
+<!-- MODAL IMPORTAR DATOS -->
 
 <div class="modal fade" id="ModalEstadoArte" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl modal-dialog-centered">
@@ -157,7 +157,7 @@
   </div>
 </div>
 
-<!-- MODAL DE ESTADO DEL ARTE-->
+<!-- FIN MODAL IMPORTAR DATOS-->
 
 
 
@@ -180,11 +180,7 @@
             Metodología PICOC
             </button>
 
-            <input type="button" value="Generar Estado del Arte" class="btn btn-dark btn-primary-custom" data-bs-toggle="modal" data-bs-target="#ModalEstadoArte">
-
-            <input type="button" value="Brechas de Ingeniería" class="btn btn-secondary btn-primary-custom">
-
-            <input type="button" value="Brechas de Sociales" class="btn btn-success btn-primary-custom">
+            <input type="button" value="Importar datos" class="btn btn-dark btn-primary-custom" data-bs-toggle="modal" data-bs-target="#ModalEstadoArte">
 
           <!-- <div class="export__file">
               <label for="export-file" class="export__file-btn" title="Export File"></label>
@@ -219,14 +215,14 @@
         <tbody>
             
                                     <!-- Fila 1 -->
-
-          <tr>
+        <form action="/guardar-datos-matriz-analisis" method="POST">   
+        <tr>
             <th scope="row">1</th>
-            <td><textarea class="form-control" name="nombre_investigacion_1"></textarea></td>
-            <td><textarea class="form-control" name="doi_1"></textarea></td>
+            <td><textarea class="form-control" name="Nombre_investigacion_1"></textarea></td>
+            <td><textarea class="form-control" name="Doi_1"></textarea></td>
 
             <td>
-                <select name="cuartil_1" class="form-control">
+                <select name="Cuartil_1" class="form-control">
                 <option value="1">Q1</option>
                 <option value="2">Q2</option>
                 <option value="3">Q3</option>
@@ -235,7 +231,7 @@
             </td>
 
             <td>
-                <select name="tipo_brecha_1" class="form-control">
+                <select name="Tipo_brecha_1" class="form-control">
                 <option value="1">Brecha de conocimiento</option>
                 <option value="2">Brecha teórica</option>
                 <option value="3">Brecha de evidencia contradictoria</option>
@@ -243,20 +239,20 @@
                 <option value="5">Brecha metodológica</option>
                 </select>
             </td>
-            <td><textarea class="form-control" name="brechas_inves_1"></textarea></td>
-            <td><textarea class="form-control" name="resumen_1"></textarea></td>
-            <td><textarea class="form-control" name="conclusiones_1"></textarea></td>
+            <td><textarea class="form-control" name="Brechas_inves_1"></textarea></td>
+            <td><textarea class="form-control" name="Resumen_1"></textarea></td>
+            <td><textarea class="form-control" name="Conclusiones_1"></textarea></td>
             
           </tr>
 
                                     <!-- Fila 2 -->
               <tr>
             <th scope="row">2</th>
-            <td><textarea class="form-control" name="nombre_investigacion_2"></textarea></td>
-            <td><textarea class="form-control" name="doi_2"></textarea></td>
+            <td><textarea class="form-control" name="Nombre_investigacion_2"></textarea></td>
+            <td><textarea class="form-control" name="Doi_2"></textarea></td>
             
             <td>
-                <select name="cuartil_2" class="form-control">
+                <select name="Cuartil_2" class="form-control">
                 <option value="1">Q1</option>
                 <option value="2">Q2</option>
                 <option value="3">Q3</option>
@@ -265,7 +261,7 @@
             </td>
 
             <td>
-                <select name="tipo_brecha_2" class="form-control">
+                <select name="Tipo_brecha_2" class="form-control">
                 <option value="1">Brecha de conocimiento</option>
                 <option value="2">Brecha teórica</option>
                 <option value="3">Brecha de evidencia contradictoria</option>
@@ -273,9 +269,9 @@
                 <option value="5">Brecha metodológica</option>
                 </select>
             </td>
-            <td><textarea class="form-control" name="brechas_inves_2"></textarea></td>
-            <td><textarea class="form-control" name="resumen_2"></textarea></td>
-            <td><textarea class="form-control" name="conclusiones_2"></textarea></td>
+            <td><textarea class="form-control" name="Brechas_inves_2"></textarea></td>
+            <td><textarea class="form-control" name="Resumen_2"></textarea></td>
+            <td><textarea class="form-control" name="Conclusiones_2"></textarea></td>
             
           </tr>
 
@@ -283,11 +279,11 @@
 
                               <tr>
             <th scope="row">3</th>
-            <td><textarea class="form-control" name="nombre_investigacion_3"></textarea></td>
-            <td><textarea class="form-control" name="doi_3"></textarea></td>
+            <td><textarea class="form-control" name="Nombre_investigacion_3"></textarea></td>
+            <td><textarea class="form-control" name="Doi_3"></textarea></td>
             
             <td>
-                <select name="cuartil_3" class="form-control">
+                <select name="Cuartil_3" class="form-control">
                 <option value="1">Q1</option>
                 <option value="2">Q2</option>
                 <option value="3">Q3</option>
@@ -296,7 +292,7 @@
             </td>
 
             <td>
-                <select name="tipo_brecha_3" class="form-control">
+                <select name="Tipo_brecha_3" class="form-control">
                 <option value="1">Brecha de conocimiento</option>
                 <option value="2">Brecha teórica</option>
                 <option value="3">Brecha de evidencia contradictoria</option>
@@ -304,9 +300,9 @@
                 <option value="5">Brecha metodológica</option>
                 </select>
             </td>
-            <td><textarea class="form-control" name="brechas_inves_3"></textarea></td>
-            <td><textarea class="form-control" name="resumen_3"></textarea></td>
-            <td><textarea class="form-control" name="conclusiones_3"></textarea></td>
+            <td><textarea class="form-control" name="Brechas_inves_3"></textarea></td>
+            <td><textarea class="form-control" name="Resumen_3"></textarea></td>
+            <td><textarea class="form-control" name="Conclusiones_3"></textarea></td>
             
           </tr>
 
@@ -315,11 +311,11 @@
 
                               <tr>
             <th scope="row">4</th>
-            <td><textarea class="form-control" name="nombre_investigacion_4"></textarea></td>
-            <td><textarea class="form-control" name="doi_4"></textarea></td>
+            <td><textarea class="form-control" name="Nombre_investigacion_4"></textarea></td>
+            <td><textarea class="form-control" name="Doi_4"></textarea></td>
             
             <td>
-                <select name="cuartil_4" class="form-control">
+                <select name="Cuartil_4" class="form-control">
                 <option value="1">Q1</option>
                 <option value="2">Q2</option>
                 <option value="3">Q3</option>
@@ -328,7 +324,7 @@
             </td>
 
             <td>
-                <select name="tipo_brecha_4" class="form-control">
+                <select name="Tipo_brecha_4" class="form-control">
                 <option value="1">Brecha de conocimiento</option>
                 <option value="2">Brecha teórica</option>
                 <option value="3">Brecha de evidencia contradictoria</option>
@@ -336,9 +332,9 @@
                 <option value="5">Brecha metodológica</option>
                 </select>
             </td>
-            <td><textarea class="form-control" name="brechas_inves_4"></textarea></td>
-            <td><textarea class="form-control" name="resumen_4"></textarea></td>
-            <td><textarea class="form-control" name="conclusiones_4"></textarea></td>
+            <td><textarea class="form-control" name="Brechas_inves_4"></textarea></td>
+            <td><textarea class="form-control" name="Resumen_4"></textarea></td>
+            <td><textarea class="form-control" name="Conclusiones_4"></textarea></td>
             
           </tr>
 
@@ -347,11 +343,11 @@
 
                               <tr>
             <th scope="row">5</th>
-            <td><textarea class="form-control" name="nombre_investigacion_5"></textarea></td>
-            <td><textarea class="form-control" name="doi_5"></textarea></td>
+            <td><textarea class="form-control" name="Nombre_investigacion_5"></textarea></td>
+            <td><textarea class="form-control" name="Doi_5"></textarea></td>
             
             <td>
-                <select name="cuartil_5" class="form-control">
+                <select name="Cuartil_5" class="form-control">
                 <option value="1">Q1</option>
                 <option value="2">Q2</option>
                 <option value="3">Q3</option>
@@ -360,7 +356,7 @@
             </td>
 
             <td>
-                <select name="tipo_brecha_5" class="form-control">
+                <select name="Tipo_brecha_5" class="form-control">
                 <option value="1">Brecha de conocimiento</option>
                 <option value="2">Brecha teórica</option>
                 <option value="3">Brecha de evidencia contradictoria</option>
@@ -368,12 +364,13 @@
                 <option value="5">Brecha metodológica</option>
                 </select>
             </td>
-            <td><textarea class="form-control" name="brechas_inves_5"></textarea></td>
-            <td><textarea class="form-control" name="resumen_5"></textarea></td>
-            <td><textarea class="form-control" name="conclusiones_5"></textarea></td>
+            <td><textarea class="form-control" name="Brechas_inves_5"></textarea></td>
+            <td><textarea class="form-control" name="Resumen_5"></textarea></td>
+            <td><textarea class="form-control" name="Conclusiones_5"></textarea></td>
             
           </tr>
-
+          <button type="submit">Guardar</button>
+        </form>
 
 
         </tbody>

@@ -25,7 +25,7 @@ uploadForm.addEventListener('submit', (event) => {
                 <br>
                 <div class="entrada-bibliografia">
                 <h1>Título: ${entry.title}</h1>
-                <p>Año: ${entry.year}</p>
+                <h2 style="font-size: 20px">Año: ${entry.year}</h2>
                 <p>Doi: ${entry.doi}</p>
                 <p>Resumen: ${entry.abstract}</p>
                 <input type="checkbox" class="check" name="checkbox">
