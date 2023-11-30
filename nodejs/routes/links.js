@@ -10,8 +10,10 @@ router.get('/matrices', estaLogeado, (req, res) => {
     res.render('links/matrices');
 });
 
-router.get('/analisis_brechas', estaLogeado, (req, res) => {
-    res.render('matrices/analisis_brecha');
+router.get('/analisis_brechas', estaLogeado, async (req, res) => {
+    const id = req.user.idUsuarios;
+    const matrizAnalisis = await db.query('SELECT * FROM Usuarios_Matriz_Analisis WHERE idUsuario = ?', [id]);
+    res.render('matrices/analisis_brecha', {datosMatriz: matrizAnalisis});
 });
 
 router.get('/publicaciones', noestaLogeado, (req, res) => {

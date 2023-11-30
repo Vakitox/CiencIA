@@ -13,7 +13,7 @@ generarEcuacion.addEventListener("click", () => {
     let textarea = document.getElementById("ecuacion-picoc");
     const textTitulo = document.getElementById("titulo-picoc");
     const TituloPicoc = textTitulo.value;
-    const tituloMatriz = document.getElementById("titulo-matriz");
+    const tituloMatriz = document.getElementById("Titulo");
  
      // Obtener los elementos.
    const textareaPoblacion = document.getElementById("población-picoc");
@@ -119,3 +119,38 @@ generarEcuacion.addEventListener("click", () => {
     tituloMatriz.innerHTML = "Tema de Investigación: " + TituloPicoc;
  
  });
+
+ /* router.post('/guardar-datos-matriz-analisis', async (req, res) => {
+    let investigaciones = {};
+
+    const nombreInvestigacion = req.body[`Nombre_investigacion_1`];
+    const doi = req.body[`Doi_1`];
+  
+    for (let i = 1; i <= 5; i++) {
+        const nombreInvestigacion = req.body[`Nombre_investigacion_${i}`];
+        const doi = req.body[`Doi_${i}`];
+        const cuartil = req.body[`Cuartil_${i}`];
+        const tipoBrecha = req.body[`Tipo_brecha_${i}`];
+        const brechasInvestigacion = req.body[`Brechas_inves_${i}`];
+        const resumen = req.body[`Resumen_${i}`];
+        const conclusiones = req.body[`Conclusiones_${i}`];
+
+        investigaciones += {
+            nombreInvestigacion,
+            doi,
+            cuartil,
+            tipoBrecha,
+            brechasInvestigacion,
+            resumen,
+            conclusiones,
+          };
+
+      }
+    
+    // Insertar datos en la base de datos
+    const idUsuario = req.user.idUsuarios;
+    //console.log([investigaciones[2]]);
+    await db.query("INSERT INTO Usuarios_Matriz_Analisis (idUsuario, Nombre_investigacion_1, Doi_1, Cuartil_1, Tipo_brecha_1, Brechas_inves_1, Resumen_1, Conclusiones_1, Nombre_investigacion_2, Doi_2, Cuartil_2, Tipo_brecha_2, Brechas_inves_2, Resumen_2, Conclusiones_2, Nombre_investigacion_3, Doi_3, Cuartil_3, Tipo_brecha_3, Brechas_inves_3, Resumen_3, Conclusiones_3, Nombre_investigacion_4, Doi_4, Cuartil_4, Tipo_brecha_4, Brechas_inves_4, Resumen_4, Conclusiones_4, Nombre_investigacion_5, Doi_5, Cuartil_5, Tipo_brecha_5, Brechas_inves_5, Resumen_5, Conclusiones_5) VALUES ('"+nombreInvestigacion+"', '"+doi+"')");
+    console.log("Insertado con éxito");
+
+  });*/

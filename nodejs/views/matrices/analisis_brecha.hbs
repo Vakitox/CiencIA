@@ -17,7 +17,6 @@
   <div class="modal-dialog modal-xl modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5 ">Tema de investigación: <input id="titulo-picoc" style="width: 600px" required></h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -169,8 +168,6 @@
 
     </div>
 
-    <br><br><h1 style="text-align:center" id="titulo-matriz"></h1><br>
-
     <table class="table_matriz table-striped">
       <section class="table__cabecera">
 
@@ -181,6 +178,8 @@
             </button>
 
             <input type="button" value="Importar datos" class="btn btn-dark btn-primary-custom" data-bs-toggle="modal" data-bs-target="#ModalEstadoArte">
+
+            <input type="submit" onclick="submitForm()" value="Guardar datos" class="btn btn-success btn-primary-custom">
 
           <!-- <div class="export__file">
               <label for="export-file" class="export__file-btn" title="Export File"></label>
@@ -215,63 +214,72 @@
         <tbody>
             
                                     <!-- Fila 1 -->
-        <form action="/guardar-datos-matriz-analisis" method="POST">   
+        <form action="/guardar-datos-matriz-analisis" method="POST" id="FormularioGuardarDatosMatrizAnalisis">  
+        {{#each datosMatriz as |item|}}
+
+        <br><br><h1 style="text-align:center" id="Titulo" name="Titulo_Matriz">Tema de Investigación: {{item.Tema}}</h1><br>
+        <input type="text" class="form-control" name="Titulo_Matriz" placeholder="Escribe tu tema de investigación...">
+
         <tr>
             <th scope="row">1</th>
-            <td><textarea class="form-control" name="Nombre_investigacion_1"></textarea></td>
-            <td><textarea class="form-control" name="Doi_1"></textarea></td>
+            <td><textarea class="form-control" name="Nombre_investigacion_1">{{item.Nombre_investigacion_1}}</textarea></td>
+            <td><textarea class="form-control" name="Doi_1">{{item.Doi_1}}</textarea></td>
 
             <td>
                 <select name="Cuartil_1" class="form-control">
-                <option value="1">Q1</option>
-                <option value="2">Q2</option>
-                <option value="3">Q3</option>
-                <option value="4">Q4</option>
+                  <option value="{{item.Cuartil_1}}" readonly>{{item.Cuartil_1}}</option>
+                  <option value="Q1">Q1</option>
+                  <option value="Q2">Q2</option>
+                  <option value="Q3">Q3</option>
+                  <option value="Q4">Q4</option>
                 </select>
             </td>
 
             <td>
                 <select name="Tipo_brecha_1" class="form-control">
-                <option value="1">Brecha de conocimiento</option>
-                <option value="2">Brecha teórica</option>
-                <option value="3">Brecha de evidencia contradictoria</option>
-                <option value="4">Brecha de selección de población y muestra</option>
-                <option value="5">Brecha metodológica</option>
+                <option value="{{item.Tipo_brecha_1}}" readonly>{{item.Tipo_brecha_1}}</option>
+                <option value="Brecha de conocimiento">Brecha de conocimiento</option>
+                <option value="Brecha teórica">Brecha teórica</option>
+                <option value="Brecha de evidencia contradictoria">Brecha de evidencia contradictoria</option>
+                <option value="Brecha de selección de población y muestra">Brecha de selección de población y muestra</option>
+                <option value="Brecha metodológica">Brecha metodológica</option>
                 </select>
             </td>
-            <td><textarea class="form-control" name="Brechas_inves_1"></textarea></td>
-            <td><textarea class="form-control" name="Resumen_1"></textarea></td>
-            <td><textarea class="form-control" name="Conclusiones_1"></textarea></td>
+            <td><textarea class="form-control" name="Brechas_inves_1">{{item.Brechas_inves_1}}</textarea></td>
+            <td><textarea class="form-control" name="Resumen_1">{{item.Resumen_1}}</textarea></td>
+            <td><textarea class="form-control" name="Conclusiones_1">{{item.Conclusiones_1}}</textarea></td>
             
           </tr>
 
                                     <!-- Fila 2 -->
               <tr>
             <th scope="row">2</th>
-            <td><textarea class="form-control" name="Nombre_investigacion_2"></textarea></td>
-            <td><textarea class="form-control" name="Doi_2"></textarea></td>
+            <td><textarea class="form-control" name="Nombre_investigacion_2">{{item.Nombre_investigacion_2}}</textarea></td>
+            <td><textarea class="form-control" name="Doi_2">{{item.Doi_2}}</textarea></td>
             
             <td>
                 <select name="Cuartil_2" class="form-control">
-                <option value="1">Q1</option>
-                <option value="2">Q2</option>
-                <option value="3">Q3</option>
-                <option value="4">Q4</option>
+                <option value="{{item.Cuartil_2}}" readonly>{{item.Cuartil_2}}</option>
+                <option value="Q1">Q1</option>
+                <option value="Q2">Q2</option>
+                <option value="Q3">Q3</option>
+                <option value="Q4">Q4</option>
                 </select>
             </td>
 
             <td>
                 <select name="Tipo_brecha_2" class="form-control">
-                <option value="1">Brecha de conocimiento</option>
-                <option value="2">Brecha teórica</option>
-                <option value="3">Brecha de evidencia contradictoria</option>
-                <option value="4">Brecha de selección de población y muestra</option>
-                <option value="5">Brecha metodológica</option>
+                <option value="{{item.Tipo_brecha_2}}" readonly>{{item.Tipo_brecha_2}}</option>
+                <option value="Brecha de conocimiento">Brecha de conocimiento</option>
+                <option value="Brecha teórica">Brecha teórica</option>
+                <option value="Brecha de evidencia contradictoria">Brecha de evidencia contradictoria</option>
+                <option value="Brecha de selección de población y muestra">Brecha de selección de población y muestra</option>
+                <option value="Brecha metodológica">Brecha metodológica</option>
                 </select>
             </td>
-            <td><textarea class="form-control" name="Brechas_inves_2"></textarea></td>
-            <td><textarea class="form-control" name="Resumen_2"></textarea></td>
-            <td><textarea class="form-control" name="Conclusiones_2"></textarea></td>
+            <td><textarea class="form-control" name="Brechas_inves_2">{{item.Brechas_inves_2}}</textarea></td>
+            <td><textarea class="form-control" name="Resumen_2">{{item.Resumen_2}}</textarea></td>
+            <td><textarea class="form-control" name="Conclusiones_2">{{item.Conclusiones_2}}</textarea></td>
             
           </tr>
 
@@ -279,30 +287,32 @@
 
                               <tr>
             <th scope="row">3</th>
-            <td><textarea class="form-control" name="Nombre_investigacion_3"></textarea></td>
-            <td><textarea class="form-control" name="Doi_3"></textarea></td>
+            <td><textarea class="form-control" name="Nombre_investigacion_3">{{item.Nombre_investigacion_3}}</textarea></td>
+            <td><textarea class="form-control" name="Doi_3">{{item.Doi_3}}</textarea></td>
             
             <td>
                 <select name="Cuartil_3" class="form-control">
-                <option value="1">Q1</option>
-                <option value="2">Q2</option>
-                <option value="3">Q3</option>
-                <option value="4">Q4</option>
+                <option value="{{item.Cuartil_3}}" readonly>{{item.Cuartil_3}}</option>
+                <option value="Q1">Q1</option>
+                <option value="Q2">Q2</option>
+                <option value="Q3">Q3</option>
+                <option value="Q4">Q4</option>
                 </select>
             </td>
 
             <td>
                 <select name="Tipo_brecha_3" class="form-control">
-                <option value="1">Brecha de conocimiento</option>
-                <option value="2">Brecha teórica</option>
-                <option value="3">Brecha de evidencia contradictoria</option>
-                <option value="4">Brecha de selección de población y muestra</option>
-                <option value="5">Brecha metodológica</option>
+                <option value="{{item.Tipo_brecha_3}}" readonly>{{item.Tipo_brecha_3}}</option>
+                <option value="Brecha de conocimiento">Brecha de conocimiento</option>
+                <option value="Brecha teórica">Brecha teórica</option>
+                <option value="Brecha de evidencia contradictoria">Brecha de evidencia contradictoria</option>
+                <option value="Brecha de selección de población y muestra">Brecha de selección de población y muestra</option>
+                <option value="Brecha metodológica">Brecha metodológica</option>
                 </select>
             </td>
-            <td><textarea class="form-control" name="Brechas_inves_3"></textarea></td>
-            <td><textarea class="form-control" name="Resumen_3"></textarea></td>
-            <td><textarea class="form-control" name="Conclusiones_3"></textarea></td>
+            <td><textarea class="form-control" name="Brechas_inves_3">{{item.Brechas_inves_3}}</textarea></td>
+            <td><textarea class="form-control" name="Resumen_3">{{item.Resumen_3}}</textarea></td>
+            <td><textarea class="form-control" name="Conclusiones_3">{{item.Conclusiones_3}}</textarea></td>
             
           </tr>
 
@@ -311,30 +321,32 @@
 
                               <tr>
             <th scope="row">4</th>
-            <td><textarea class="form-control" name="Nombre_investigacion_4"></textarea></td>
-            <td><textarea class="form-control" name="Doi_4"></textarea></td>
+            <td><textarea class="form-control" name="Nombre_investigacion_4">{{item.Nombre_investigacion_4}}</textarea></td>
+            <td><textarea class="form-control" name="Doi_4">{{item.Doi_4}}</textarea></td>
             
             <td>
                 <select name="Cuartil_4" class="form-control">
-                <option value="1">Q1</option>
-                <option value="2">Q2</option>
-                <option value="3">Q3</option>
-                <option value="4">Q4</option>
+                <option value="{{item.Cuartil_4}}" readonly>{{item.Cuartil_4}}</option>
+                <option value="Q1">Q1</option>
+                <option value="Q2">Q2</option>
+                <option value="Q3">Q3</option>
+                <option value="Q4">Q4</option>
                 </select>
             </td>
 
             <td>
                 <select name="Tipo_brecha_4" class="form-control">
-                <option value="1">Brecha de conocimiento</option>
-                <option value="2">Brecha teórica</option>
-                <option value="3">Brecha de evidencia contradictoria</option>
-                <option value="4">Brecha de selección de población y muestra</option>
-                <option value="5">Brecha metodológica</option>
+                <option value="{{item.Tipo_brecha_4}}" readonly>{{item.Tipo_brecha_4}}</option>
+                <option value="Brecha de conocimiento">Brecha de conocimiento</option>
+                <option value="Brecha teórica">Brecha teórica</option>
+                <option value="Brecha de evidencia contradictoria">Brecha de evidencia contradictoria</option>
+                <option value="Brecha de selección de población y muestra">Brecha de selección de población y muestra</option>
+                <option value="Brecha metodológica">Brecha metodológica</option>
                 </select>
             </td>
-            <td><textarea class="form-control" name="Brechas_inves_4"></textarea></td>
-            <td><textarea class="form-control" name="Resumen_4"></textarea></td>
-            <td><textarea class="form-control" name="Conclusiones_4"></textarea></td>
+            <td><textarea class="form-control" name="Brechas_inves_4">{{item.Brechas_inves_4}}</textarea></td>
+            <td><textarea class="form-control" name="Resumen_4">{{item.Resumen_4}}</textarea></td>
+            <td><textarea class="form-control" name="Conclusiones_4">{{item.Conclusiones_4}}</textarea></td>
             
           </tr>
 
@@ -343,35 +355,36 @@
 
                               <tr>
             <th scope="row">5</th>
-            <td><textarea class="form-control" name="Nombre_investigacion_5"></textarea></td>
-            <td><textarea class="form-control" name="Doi_5"></textarea></td>
+            <td><textarea class="form-control" name="Nombre_investigacion_5">{{item.Nombre_investigacion_5}}</textarea></td>
+            <td><textarea class="form-control" name="Doi_5">{{item.Doi_5}}</textarea></td>
             
             <td>
                 <select name="Cuartil_5" class="form-control">
-                <option value="1">Q1</option>
-                <option value="2">Q2</option>
-                <option value="3">Q3</option>
-                <option value="4">Q4</option>
+                <option value="{{item.Cuartil_5}}" readonly>{{item.Cuartil_5}}</option>
+                <option value="Q1">Q1</option>
+                <option value="Q2">Q2</option>
+                <option value="Q3">Q3</option>
+                <option value="Q4">Q4</option>
                 </select>
             </td>
 
             <td>
                 <select name="Tipo_brecha_5" class="form-control">
-                <option value="1">Brecha de conocimiento</option>
-                <option value="2">Brecha teórica</option>
-                <option value="3">Brecha de evidencia contradictoria</option>
-                <option value="4">Brecha de selección de población y muestra</option>
-                <option value="5">Brecha metodológica</option>
+                <option value="{{item.Tipo_brecha_5}}" readonly>{{item.Tipo_brecha_5}}</option>
+                <option value="Brecha de conocimiento">Brecha de conocimiento</option>
+                <option value="Brecha teórica">Brecha teórica</option>
+                <option value="Brecha de evidencia contradictoria">Brecha de evidencia contradictoria</option>
+                <option value="Brecha de selección de población y muestra">Brecha de selección de población y muestra</option>
+                <option value="Brecha metodológica">Brecha metodológica</option>
                 </select>
             </td>
-            <td><textarea class="form-control" name="Brechas_inves_5"></textarea></td>
-            <td><textarea class="form-control" name="Resumen_5"></textarea></td>
-            <td><textarea class="form-control" name="Conclusiones_5"></textarea></td>
+            <td><textarea class="form-control" name="Brechas_inves_5">{{item.Brechas_inves_5}}</textarea></td>
+            <td><textarea class="form-control" name="Resumen_5">{{item.Resumen_5}}</textarea></td>
+            <td><textarea class="form-control" name="Conclusiones_5">{{item.Conclusiones_5}}</textarea></td>
             
           </tr>
-          <button type="submit">Guardar</button>
+              {{/each}}
         </form>
-
 
         </tbody>
     </table>

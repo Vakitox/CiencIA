@@ -14,7 +14,7 @@ passport.use('local.login', new LocalStrategy({
       const user = rows[0];
       const validPassword = await helpers.matchPassword(contrasena, user.Contrasena);
       if (validPassword) {
-        done(null, user, req.flash('bienvenido', 'Welcome ' + user.Nombres));
+        done(null, user);
 
       } else {
         done(null, false, req.flash('error', 'Incorrect Password'));
@@ -62,7 +62,6 @@ passport.use('local.registro', new LocalStrategy({
       permisos
   };
   newUser.contrasena = await helpers.encryptPassword(contrasena);
-  console.log([newUser]);
   const result = await db.query('INSERT INTO Usuarios set ?', [newUser]);
   newUser.idUsuarios = result.insertId;
 

@@ -205,3 +205,10 @@
 
 
 })(window.jQuery);
+
+//Botón Guardar Datos
+
+function submitForm() {
+	// Ejecutar el formulario POST
+	document.getElementById("FormularioGuardarDatosMatrizAnalisis").submit();
+  }
