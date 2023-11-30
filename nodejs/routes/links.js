@@ -12,6 +12,7 @@ router.get('/matrices', estaLogeado, (req, res) => {
 
 router.get('/analisis_brechas', estaLogeado, async (req, res) => {
     const id = req.user.idUsuarios;
+    await db.query('INSERT INTO Usuarios_Matriz_Analisis set idUsuario = ?', [id]);
     const matrizAnalisis = await db.query('SELECT * FROM Usuarios_Matriz_Analisis WHERE idUsuario = ?', [id]);
     res.render('matrices/analisis_brecha', {datosMatriz: matrizAnalisis});
 });
