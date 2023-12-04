@@ -8,12 +8,21 @@ $btn.addEventListener("click", () => {
     document.execCommand('copy');
   });
 
+generarTitulo.addEventListener("click", () => {
+
+    const textTitulo = document.getElementById("titulo-picoc");
+    const TituloPicoc = textTitulo.value;
+    console.log(TituloPicoc);
+    const tituloMatriz = document.getElementById("titulo-matriz");
+    const tituloMatrizAux = document.getElementById("titulo-matriz-aux");
+
+    tituloMatriz.innerHTML = "Tema de Investigación: " + TituloPicoc;
+    tituloMatrizAux.value = TituloPicoc;
+});
+
 generarEcuacion.addEventListener("click", () => {
 
     let textarea = document.getElementById("ecuacion-picoc");
-    const textTitulo = document.getElementById("titulo-picoc");
-    const TituloPicoc = textTitulo.value;
-    const tituloMatriz = document.getElementById("Titulo");
  
      // Obtener los elementos.
    const textareaPoblacion = document.getElementById("población-picoc");
@@ -114,9 +123,7 @@ generarEcuacion.addEventListener("click", () => {
     // Imprimir el valor del elemento input.
 
     const textRespuesta = "(TITLE-ABS-KEY ( " + nuevaPoblacion + " ) AND TITLE-ABS-KEY ( " + nuevaIntervencion + " ) AND TITLE-ABS-KEY ( " +  nuevaComparacion + " ) AND TITLE-ABS-KEY ( " +  nuevaResultado + " ) AND TITLE-ABS-KEY ( " +  nuevaContexto + " ))";
-
     textarea.innerHTML = textRespuesta;
-    tituloMatriz.innerHTML = "Tema de Investigación: " + TituloPicoc;
  
  });
 

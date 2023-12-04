@@ -1,17 +1,17 @@
 $(document).ready(function () {
 
-    function showPopup(){
-        $('.pop-up').addClass('show');
-        $('.pop-up-wrap').addClass('show');
+    function showPopupMatrizAnalisis(){
+        $('#anuncio-matriz-analisis .pop-up').addClass('show');
+        $('#anuncio-matriz-analisis .pop-up-wrap').addClass('show');
     }
 
-    $("#close").click(function(){
-        $('.pop-up').removeClass('show');
-        $('.pop-up-wrap').removeClass('show');
+    $("#anuncio-matriz-analisis #close").click(function(){
+        $('#anuncio-matriz-analisis .pop-up').removeClass('show');
+        $('#anuncio-matriz-analisis .pop-up-wrap').removeClass('show');
     });
 
-    $(".btn-abrir").click(showPopup);
+    $(".btn-abrir").click(showPopupMatrizAnalisis);
 
-    setTimeout(showPopup, 2000);
+    setTimeout(showPopupMatrizAnalisis, 2000);
 
 });
