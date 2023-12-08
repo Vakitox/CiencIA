@@ -490,7 +490,7 @@ a.button-custom a.active {
     color: #fff;
     margin: 0;
   }
-  #Services .service-box .yellow {
+  /*#Services .service-box .yellow {
     background-color: #02b3e4;
   }
   #Services .service-box .orange {
@@ -501,7 +501,7 @@ a.button-custom a.active {
   }
   #Services .service-box .grey {
     background-color: #47c6d0;
-  }
+  }*/
   #Services .service-box:hover .service-icon {
     opacity: 0;
     -webkit-transform: translateY(-110px) rotateX(90deg);

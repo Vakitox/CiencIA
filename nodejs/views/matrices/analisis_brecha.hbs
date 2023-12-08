@@ -22,8 +22,8 @@
     <div class="modal-content">
       <div class="modal-header">
         <div><th>Tema de Investigación:ㅤ</th></div>
-        <div style="padding-right: 20px"><input id="titulo-picoc" style="width: 700px;" type="text" class="form-control" name="Titulo_Matriz" placeholder="Escribe un tema de investigación..."></div>
-        <button id="generarTitulo" type="button" class="btn btn-success">Generar tema</button>
+        <div style="padding-right: 20px"><input id="titulo-picoc" style="width: 750px;" type="text" class="form-control" name="Titulo_Matriz" placeholder="Escribe un tema de investigación..."></div>
+        <button id="generarTitulo" type="button" class="btn btn-success">Aceptar</button>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -73,9 +73,11 @@
         </svg>ㅤCopiar</button>
       </div>
       <div class="modal-footer">
-        <a class="btn btn-success" href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" onclick="alert('¡Redirigiendo a Pubmed!')">Abrir Pubmed</a>
-        <a class="btn btn-success" href="https://www.scopus.com/" target="_blank" onclick="alert('¡Redirigiendo a Scopus!')">Abrir Scopus</a>
-        <a class="btn btn-success" href="https://www.sciencedirect.com/" target="_blank" onclick="alert('¡Redirigiendo a ScienceDirect!')">Abrir ScienceDirect</a>
+
+        <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" onclick="alert('¡Redirigiendo a Pubmed!')"><img src="images/pubmed-btn.png" style="width: 100px"></a>
+        <a href="https://www.scopus.com/" target="_blank" onclick="alert('¡Redirigiendo a Scopus!')"><img src="images/scopus-btn.png" style="width: 100px"></a>
+        <a href="https://www.sciencedirect.com/" target="_blank" onclick="alert('¡Redirigiendo a ScienceDirect!')"><img src="images/science-btn.png" style="width: 100px"></a>
+        
         <button id="generarEcuacion" type="button" class="btn btn-primary">Generar ecuación</button>
         <script src="/js/ecuacion.js"></script>
       </div>
@@ -206,14 +208,14 @@
   <div class="modal-dialog modal-xl modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5 ">Selección de tema por medio de archivo .BIB</h1>
+        <h1 class="modal-title fs-5 ">Importar datos</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-            <h2>Subir archivo .bib</h2>
+            <h2>Subir archivo data en formato .bib</h2><br>
             <form id="upload-form">
-                <input type="file" id="bib-file" accept=".bib"><br><br>
-                <button type="submit">Cargar Archivo</button>
+                <input class="btn btn-warning" type="file" id="bib-file" accept=".bib"><br><br>
+                <button class="btn btn-success" type="submit">Cargar data</button>
             </form>
             <div id="organized-bib">
             </div>
@@ -295,7 +297,7 @@
 
             <th scope="col" >Nombre de investigaciónㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-class" data-bs-placement="top" data-bs-title="Título del artículo de investigación encontrado con tu ecuación en la base de datos escogida."></i></th>
 
-            <th scope="col" style="width: 19%">DOIㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-class" data-bs-placement="top" data-bs-title="Identificador único de 16 caracteres de un objeto digital, lo puedes encontrar en la página de tu artículo de investigación. Revisa la guía en el menú izquierdo de ayuda."></i></th>
+            <th scope="col" style="width: 15%">DOIㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-class" data-bs-placement="top" data-bs-title="Identificador único de 16 caracteres de un objeto digital, lo puedes encontrar en la página de tu artículo de investigación. Revisa la guía en el menú izquierdo de ayuda."></i></th>
             <th scope="col" style="width: 8.5%">Cuartil (Q)ㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-class" data-bs-placement="top" data-bs-title="Se utiliza para clasificar las revistas científicas en función de su impacto. Revisa la guía en el menú izquierdo de ayuda."></i></th>
             <th scope="col" style="width: 17%">Tipo de brechaㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-class" data-bs-placement="top" data-bs-title="Prueba de Tooltip 3"></i></th>
             <th scope="col">Brechas de investigaciónㅤ<i style="color: rgb(255, 220, 81)" class="bi bi-question-circle-fill" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-class" data-bs-placement="top" data-bs-title="Prueba de Tooltip 4"></i></th>
