@@ -22,7 +22,7 @@
 	})
 
 
-	$(window).scroll(function () {
+	/*$(window).scroll(function () {
 		var scroll = $(window).scrollTop();
 		var box = $('.header-text').height();
 		var header = $('header').height();
@@ -32,7 +32,7 @@
 		} else {
 			$("header").removeClass("background-header");
 		}
-	});
+	});*/
 
 	// Window Resize Mobile Menu Fix
 	mobileNav();

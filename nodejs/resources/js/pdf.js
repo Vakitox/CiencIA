@@ -1,5 +1,4 @@
 const doiButtonPDF1 = document.getElementById('PDF-1');
-const doiButtonPDF2 = document.getElementById('PDF-2');
 const doiButtonPDF3 = document.getElementById('PDF-3');
 const doiButtonPDF4 = document.getElementById('PDF-4');
 const doiButtonPDF5 = document.getElementById('PDF-5');
@@ -17,10 +16,6 @@ const doiIframeNoWeb = document.getElementById('srcPDFnoWEB');
 
     doiButtonPDF1.addEventListener('click', () => {
     doiIframeNoWeb.src = "/pdfs/pdf-1.pdf";
-    });
-
-    doiButtonPDF2.addEventListener('click', () => {
-        doiIframe.src = "Ninguna";
     });
 
     doiButtonPDF3.addEventListener('click', () => {

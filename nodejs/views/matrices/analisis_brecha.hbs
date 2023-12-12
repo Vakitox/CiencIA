@@ -77,7 +77,7 @@
         <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" onclick="alert('¡Redirigiendo a Pubmed!')"><img src="images/pubmed-btn.png" style="width: 100px"></a>
         <a href="https://www.scopus.com/" target="_blank" onclick="alert('¡Redirigiendo a Scopus!')"><img src="images/scopus-btn.png" style="width: 100px"></a>
         <a href="https://www.sciencedirect.com/" target="_blank" onclick="alert('¡Redirigiendo a ScienceDirect!')"><img src="images/science-btn.png" style="width: 100px"></a>
-        
+
         <button id="generarEcuacion" type="button" class="btn btn-primary">Generar ecuación</button>
         <script src="/js/ecuacion.js"></script>
       </div>
@@ -85,6 +85,87 @@
   </div>
 
 </div>
+
+<!-- MODAL BRECHAS -->
+{{#each datosMatriz as |item|}}
+<div class="modal fade" id="exampleModalBrechas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div><th>Tus investigaciones:ㅤ</th></div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table>
+          <thead>
+            <tr>
+              <th>NOMBRE DE INVESTIGACIÓN</th>
+              <th>PROMPT PARA BRECHA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="width: 60%">{{item.Nombre_investigacion_1}}</td>
+              <td><textarea class="form-control" id="prompt-brecha-1" style="height: 229px !important" required>Quiero que actúes como un investigador y metodólogo experto. Necesito que me escribas 5 brechas de investigación del siguiente doi ({{item.Doi_1}}). Las respuestas dámelas en español.</textarea></td>
+              <td>
+                <button id="copiarPrompt1" type="button" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                  <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>ㅤCopiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 60%">{{item.Nombre_investigacion_2}}</td>
+              <td><textarea class="form-control" id="prompt-brecha-2" style="height: 229px !important" required>Quiero que actúes como un investigador y metodólogo experto. Necesito que me escribas 5 brechas de investigación del siguiente doi ({{item.Doi_2}}). Las respuestas dámelas en español.</textarea></td>
+              <td>
+                <button id="copiarPrompt2" type="button" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                  <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>ㅤCopiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 60%">{{item.Nombre_investigacion_3}}</td>
+              <td><textarea class="form-control" id="prompt-brecha-3" style="height: 229px !important" required>Quiero que actúes como un investigador y metodólogo experto. Necesito que me escribas 5 brechas de investigación del siguiente doi ({{item.Doi_3}}). Las respuestas dámelas en español.</textarea></td>
+              <td>
+                <button id="copiarPrompt3" type="button" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                  <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>ㅤCopiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 60%">{{item.Nombre_investigacion_4}}</td>
+              <td><textarea class="form-control" id="prompt-brecha-4" style="height: 229px !important" required>Quiero que actúes como un investigador y metodólogo experto. Necesito que me escribas 5 brechas de investigación del siguiente doi ({{item.Doi_4}}). Las respuestas dámelas en español.</textarea></td>
+              <td>
+                <button id="copiarPrompt4" type="button" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                  <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>ㅤCopiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 60%">{{item.Nombre_investigacion_5}}</td>
+              <td><textarea class="form-control" id="prompt-brecha-5" style="height: 229px !important" required>Quiero que actúes como un investigador y metodólogo experto. Necesito que me escribas 5 brechas de investigación del siguiente doi ({{item.Doi_5}}). Las respuestas dámelas en español.</textarea></td>
+              <td>
+                <button id="copiarPrompt5" type="button" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                  <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>ㅤCopiar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <a href="https://bard.google.com/" target="_blank" onclick="alert('¡Redirigiendo a Bard!')"><img src="images/bard-btn.png" style="width: 100px"></a>
+        <script src="/js/prompt.js"></script>
+        {{!-- <button id="generarPrompt" type="button" class="btn btn-primary">Generar Prompts</button> --}}
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
 
 <!-- MODAL DE INICIO DE PAGINA -->
 <div id="anuncio-matriz-analisis">
@@ -270,6 +351,10 @@
             </button>
 
             <input type="button" value="Importar datos" class="btn btn-dark btn-primary-custom" data-bs-toggle="modal" data-bs-target="#ModalEstadoArte">
+            
+            <button type="button" class="btn btn-primary btn-primary-custom" data-bs-toggle="modal" data-bs-target="#exampleModalBrechas">
+            Brechas de Investigación
+            </button>
 
             <input type="button" class="btn btn-dark btn-primary-custom" value="Estado del Arte">
 
@@ -509,6 +594,7 @@
     </script>
     <script src="/js/Pop-up.js"></script>
     <script src="/js/toastguardado.js"></script>
+    <script src="/js/custom.js"></script>
 
 
 </main>
